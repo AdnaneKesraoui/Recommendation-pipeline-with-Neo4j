@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 22 September 2020</h5>
+				
+									Neo4j 4.1.2 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Cypher-shell version 4.1.1</li>
+   <li>Fix a performance regression when using IN on large lists.</li>
+   <li>Fix bug which could end up in Can’t coerce NO_VALUE to Path errors being thrown when using user-defined functions.</li>
+   <li>Fix a bug in the code generation for pipelined runtime, that under certain rare plans could cause that not all the necessary variables in a row were copied between pipelines, leading to null pointer exceptions or unexpected results.</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

@@ -1,0 +1,33 @@
+
+			
+									<h5>Release Date: 28 February 2024</h5>
+				
+									Neo4j 4.4.31 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Fixes a bug in <code>neo4j-admin report</code> where the command would only collect information for the default database, and transaction logs could be missed.</li>
+<li>Fixes the error <code>Temporary store is dislocated. /.../</code>, when executing <code>neo4j-admin import</code> in an docker container.</li>
+<li>Constraint indexes waiting for their owning constraint to be created will no longer come online upon a restart.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Improve caching when obfuscating literals in the query log.</li>
+<li>Fix a bug where in some circumstances when OpenID Connect discovery was configured, values from the discovery endpoint could displace values from neo4j.conf which should take precedence.</li>
+<li>Fix invalid streaming time presented in cypher-shell and browser. See <a href="https://github.com/neo4j/neo4j/issues/13380">https://github.com/neo4j/neo4j/issues/13380</a>.</li>
+</ul>
+
+<h3>Bundled Packages:</h3>
+Cypher-Shell 4.4.31<br>
+labs/apoc-4.4.0.25-core<br>
+products/bloom-plugin-4.x-2.11.0<br>
+products/neo4j-graph-data-science-2.6.0<br>
+products/neo4j-ops-manager-agent-1.9.1<br>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a><br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

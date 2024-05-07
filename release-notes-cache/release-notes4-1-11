@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 16 November 2021</h5>
+				
+									Neo4j 4.1.11 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update netty to 4.1.66 to address vulnerabilities CVE-2021-21409 and CVE-2021-21295</li>
+   <li>Update netty to address CVE-2021-37136 and CVE-2021-37137</li>
+   <li>Fix wrong result in PIPELINED runtime for some cases of OPTIONAL MATCH</li>
+   <li>causal clustering: Remove Leader selection log spam</li>
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

@@ -1,0 +1,42 @@
+
+			
+									<h5>Release Date: 24 February 2023</h5>
+				
+									Neo4j 4.4.18 is a maintenance release with many important improvements and fixes.
+
+<h3>Cypher</h3>
+<ul>
+<li>Fix bug where planning of <code>IN</code> predicates with empty lists (e.g. <code>5 IN []</code>) would throw exception.</li>
+</ul>
+
+<h3>Docker</h3>
+<ul>
+<li>Invalid NEO4J_PLUGINS values now produces a helpful error message.<br><br>
+For example: <code>NEO4J_PLUGINS='["gds"]'</code> will now return:<br><br>
+<div class="box">
+<pre>"gds" is not a known Neo4j plugin. Options are:
+apoc
+apoc-core
+bloom
+graph-algorithms
+graph-data-science
+graphql
+n10s
+streams
+<br>
+</pre>
+</div>
+</li>
+<li>Docker now allows users to accept an evaluation license if they do not have a commercial license.</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Fixes an issue where returning empty maps throws an error on composite databases. Fixes github issue <a href="https://github.com/neo4j/neo4j/issues/13028">https://github.com/neo4j/neo4j/issues/13028</a></li>
+</ul>
+
+<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

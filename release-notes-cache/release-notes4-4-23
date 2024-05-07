@@ -1,0 +1,27 @@
+
+			
+									<h5>Release Date: 6 July 2023</h5>
+				
+									Neo4j 4.4.23 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Fix a bug in certain queries using PERIODIC COMMIT that reads a ‘lucene+native’ index. The bug caused a QueryExecutionKernelException: This selector has been closederror if the first batch does not read from the index. Affects all runtimes, but in pipelined it is easy to reproduce if periodic commit batch size is smaller than internal.cypher.pipelined.batch_size_big.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Fixes https://github.com/neo4j/neo4j/issues/13163 by making deprecation checks more type safe.</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Fixes a bug where impersonated user isn’t cleared correctly on failure.</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

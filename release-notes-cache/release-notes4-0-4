@@ -1,0 +1,23 @@
+
+			
+									<h5>Release Date: 4 May 2020</h5>
+				
+									Neo4j 4.0.4 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>cypher-shell: This adds support for neo4j+s, neo4j+ssc, bolt+s, and bolt+ssc.</li>
+   <li>cypher-shell: Fix bug when running non-interactively and password change required</li>
+   <li>Update shiro to 1.5.2 to fix BlackDuck warning</li>
+   <li>Improve disabled metrics log messages</li>
+   <li>Fix validation for external path (from/to) in neo4j-admin administrative commands</li>
+   <li>Fix a rewriter issue which caused too many predicates to be rewritten away for certain queries with optional match and distinct.</li>
+   <li>Fixes a bug where the security graph wasn’t initialized unless native was used in either dbms.security.authentication_providers or dbms.security.authorization_providers when running in a clustered environment</li>
+   <li>The database could previously leave the “temp-bootstrap” directory around as part of cluster formation and especially as part of a series of failed formation attempts this lead to them getting stacked further and further on top of each other (i.e. temp-bootstrap/temp-bootstrap/temp-bootstrap/…). This should only have affected the bootstrapping of the system database. For installations which are functional but have this directory laying around unnecessarily it will simply be removed now for any database.</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

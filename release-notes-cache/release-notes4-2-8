@@ -1,0 +1,21 @@
+
+			
+									<h5>Release Date: 18 June 2021</h5>
+				
+									Neo4j 4.2.8 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fix a bug where the security context on a transaction was being overridden to allow administration commands to be run, but was not properly being reset to the previous state.</li>
+   <li>Update jersey to 2.34 to address CVE-2021-28168</li>
+   <li>Bump commons io to 2.9 to address VULNDB-239195</li>
+   <li>Fixed a bug where running an aggregating query through Fabric would fail with namespacing error.</li>
+   <li>Fixes a bug in consistency checker that prevented all node indexes from using the index checking variant designed for larger indexes.</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.2-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.2 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.2/">here</a>.				
+					

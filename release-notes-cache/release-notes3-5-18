@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 13 May 2020</h5>
+				
+									Neo4j 3.5.18 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>Update Apache Shiro to 1.5.2</li>
+   <li>Includes NodeRecord in dynamic label record load error</li>
+   <li>Fixes issue shrinking high_limit double-unit record back to single-unit</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-3.5-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 3.5 Operations manual <a href="https://neo4j.com/docs/operations-manual/3.5/">here</a>.
+<h3>Upgrading</h3>
+When upgrading to Neo4j 3.5 for the first time, be sure to read the current upgrade instructions in the <a href="https://neo4j.com/docs/operations-manual/3.5/upgrade/" target="_blank" rel="noopener noreferrer">Neo4j Operations Manual</a>, as there are additional steps and considerations.				
+					

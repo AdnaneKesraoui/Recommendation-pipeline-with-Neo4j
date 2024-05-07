@@ -1,0 +1,33 @@
+
+			
+									<h5>Release Date: 11 August 2022</h5>
+				
+									Neo4j 4.3.17 is a maintenance release with many important improvements and fixes.
+
+				<h3 class="western"><a name="user-content-kernel"></a>Kernel</h3>
+				<ul>
+					<li><p>Upgrade bouncycastle dependency to 1.69 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-cypher"></a>Cypher</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Added rewriter for
+					shortestPath and allShortestPaths with fixed length
+					relationships to instead have a variable length of one [r*1..1].
+										</p>
+					</li><li><p>Adds blocklist of ip addresses for cypher’s outbound http
+					requests 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-security"></a>Security</h3>
+				<ul>
+					<li><p>Upgraded jetty to v9.4.48 in order to mitigate
+					CVE-2022-2047 and CVE-2022-2048 
+					</p>
+				</li></ul>
+
+
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">4.3 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.3/">4.3 Operations manual</a>.				
+					

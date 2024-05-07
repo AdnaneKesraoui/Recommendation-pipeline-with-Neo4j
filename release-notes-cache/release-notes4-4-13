@@ -1,0 +1,31 @@
+
+			
+									<h5>Release Date: 7 November 2022</h5>
+				
+									Neo4j 4.4.13 is a maintenance release with many important improvements and fixes.
+<h3>Kernel</h3>
+<ul>
+ 	<li>Fix a bug where a failure in transaction event listener could cause faulty reuse of internal transaction object. Observed symptom is failing to open a new transaction due to what looks like a memory leak.</li>
+ 	<li>Fix edge case where active transactions metrics were inconsistently decremented on closing a transaction, which lead to&nbsp;<code>&lt;prefix&gt;.transaction.active_read</code>&nbsp;to potentially appear negative.</li>
+ 	<li>Bump commons-text 1.9 -&gt; 1.10.0 so as to address CVE-2022-42889</li>
+ 	<li>Fixes possible crashes when using very small page cache sizes</li>
+ 	<li>Upgraded Lucene to version 8.11.2 to pick up security fixes</li>
+</ul>
+<h3><a id="user-content-cypher" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog#cypher" aria-hidden="true"></a>Cypher</h3>
+<ul>
+ 	<li>Fix a bug where SHOW DATABASES may not include all servers for a database if the servers have the same value for&nbsp;<code>server.bolt.advertised_address</code></li>
+ 	<li>Fix a bug in pipelined runtime that can cause incorrect row ordering in queries that leverage order and contain an aggregation.</li>
+ 	<li>Fix bug where columns could be swapped for UNION queries.</li>
+ 	<li>Upgraded Apache Shiro from 1.9.1 to 1.10.0</li>
+ 	<li>Fix&nbsp;<code>bitIndex &lt; 0</code>&nbsp;errors during physical planning of complex queries with dynamic scheduling, like ordered union.</li>
+ 	<li>Fix bug in&nbsp;<code>Expand(Into)</code>&nbsp;where we could fail to find existing relationships if the same node is expanded multiple times.</li>
+</ul>
+<h3><a id="user-content-clustering" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog#clustering" aria-hidden="true"></a>Clustering</h3>
+<ul>
+ 	<li>Fix bug where store copy failed to retry against certain remotes due to issues with address locking logic.</li>
+ 	<li>Bug fix where the wrong artefact was chosen for databases with the same name but different database ids.</li>
+</ul>
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">4.4 Changelog</a><br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>				
+					

@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 1 October 2020</h5>
+				
+									Neo4j 4.1.3 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Handle relationship property reads on missing relationships after OPTIONAL EXPAND</li>
+   <li>Add CREATE IF NOT EXISTS and DROP IF EXISTS to the index and constraint management commands to make them optionally idempotent.</li>
+   <li>Fixes a volumetric checkpoint triggering issue where database could be stuck in a state where checkpoint was made, but no logs were pruned and so checkpoints would be continued to be made even tho no transactions were committed</li>
+   <li>Prevent crash in dbms.killTransaction when log level is set to debug</li>
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

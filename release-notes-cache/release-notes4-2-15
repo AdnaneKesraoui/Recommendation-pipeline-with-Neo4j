@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 9 February 2022</h5>
+				
+									Neo4j 4.2.15 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update netty to 4.1.73.Final to address CVE-2021-43797. Whilst the affected code is not used, this will prevent it from incorrectly flagging it in security scanning tools.</li>
+   <li>Fix a memory leak of the runtime transactional context into the query plan cache</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.2-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.2 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.2/">here</a>.				
+					

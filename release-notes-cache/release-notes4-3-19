@@ -1,0 +1,30 @@
+
+			
+									<h5>Release Date: 11 October 2022</h5>
+				
+									Neo4j 4.3.19 is a maintenance release with many important improvements and fixes.
+<h3>Kernel</h3>
+<ul>
+ 	<li>Fix node degree calculation when relationships are removed in the same transaction</li>
+</ul>
+<h3><a id="user-content-cypher" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog#cypher" aria-hidden="true"></a>Cypher</h3>
+<ul>
+ 	<li>Fixes a problem with&nbsp;<code>NullPointerException</code>s in MultiNodeIndexSeek. For example in certain queries with MultiNodeIndex seek under a limit.</li>
+ 	<li>Update the list of valid timezones to include&nbsp;<code>Europe/Kyiv</code>, as per IANA 2020b.</li>
+ 	<li>Fix bug in pipelined runtime where some queries using AssertingMultiNodeIndexSeekOperator would fail incorrectly with&nbsp;<code>Merge did not find a matching node...</code>. For example in queries like&nbsp;<code>UNWIND [0,1] AS id MERGE (n:A:B {id: id})</code>, if there is a uniqueness constraint on the id property for both A and B labels.</li>
+ 	<li>Fix bug in pipelined runtime where AssertingMultiNodeIndexSeekOperator failed to perform locking index seeks. This could lead to failures when running concurrent transactions in queries like&nbsp;<code>MERGE (n:A:B {id: x})</code>&nbsp;when we have a uniqueness constraint on id for both labels A and B.</li>
+</ul>
+<h3><a id="user-content-browser" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog#browser" aria-hidden="true"></a>Browser</h3>
+<ul>
+ 	<li>Touch up guides&nbsp;✨styling✨</li>
+ 	<li>Fix cluster detection on neo4j 4.3+</li>
+ 	<li>Fix bug with incorrect version number &amp; add git hash to overview in stand-alone deployment</li>
+ 	<li>Zoom to cursor on scroll in visualization</li>
+ 	<li>Make sure editor displays full database name</li>
+ 	<li>Zoom graph to fit after initial visualization animation</li>
+ 	<li>Clear credentials in connection form on disconnect</li>
+ 	<li>Update :help articles on INDEX &amp; CONSTRAINT</li>
+ 	<li>Fix credential timeout without initial user interaction</li>
+ 	<li>Fix links not being blue and not being highlighted in the sidebar</li>
+</ul>				
+					

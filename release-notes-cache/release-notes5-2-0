@@ -1,0 +1,103 @@
+
+<h2 id="release-5_2"><b>Neo4j 5.2 </b><span style="font-weight: 400;">(21 Nov 2022)</span></h2>
+<h3><span style="font-weight: 400;">Highlights</span></h3>
+<h4><span style="font-weight: 400;">Products included</span></h4>
+<span style="font-weight: 400;">The following products have been included in the distribution – available in /products
+directory unless stated otherwise – and are fully compatible with this release.&nbsp;</span>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>APOC 5.2.1 – </b><span style="font-weight: 400;">The most popular community library developed for the database, is&nbsp; fully supported (included in Labs directory).</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Bloom 2.5.1</b><span style="font-weight: 400;"> – A beautiful and expressive data visualization tool to quickly explore and interact with Neo4j’s graph data platform – no coding
+required. Please refer to the</span><a href="https://neo4j.com/release-notes/bloom/bloom-2-5-1"><span style="font-weight: 400;"> release notes</span></a><span style="font-weight: 400;"> for details. </span><b>(Requires a License)</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Browser 5.0.0 </b><span style="font-weight: 400;">– Neo4j Browser is a tool for developers to interact with the graph. It is the default interface for both Enterprise and Community
+Editions (included in the /libs directory) of the Neo4j database.&nbsp;</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Neo4j Graph Data Science 2.2</b><span style="font-weight: 400;">.<strong>4</strong> is a connected data analytics and machine learning platform that
+helps you understand the connections in big data to answer critical questions and improve predictions. Please
+refer to the</span><a href="https://neo4j.com/release-notes/gds/graph-data-science-2-2-4"><span style="font-weight: 400;"> release notes</span></a><span style="font-weight: 400;"> for further details. (</span><a href="https://neo4j.com/docs/graph-data-science/current/installation/installation-enterprise-edition/"><span style="font-weight: 400;">GDS Enterprise requires a License</span></a><span style="font-weight: 400;">. )</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Neo4j Ops Manager 1.2.2 </b><span style="font-weight: 400;">is a UI-based tool that enables Administrators to operate and observe all of their Neo4j Database Management Servers.
+Now includes support for Neo4j’s any-to-any upgrade. Please refer to the </span><a href="https://neo4j.com/release-notes/nom/neo4j-ops-manager-1-2-2/"><span style="font-weight: 400;">release notes</span></a><span style="font-weight: 400;"> for details. </span><b>(Included in Enterprise)</b><span style="font-weight: 400;">.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Language and Graph Model</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>graph.propertiesByName() retrieves properties from graphs in a
+COMPOSITE database</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Deprecated the same relationship variable for multiple variable length
+relationships </b><span style="font-weight: 400;">e.g. MATCH ()-[r*]-&gt;(), ()-[r*]-&gt;() and will be removed in
+a future version.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Write and Import Performance&nbsp;</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>New default value 70% of heap for ‘dbms.memory.transaction.total.max’
+</b><span style="font-weight: 400;">to reduce the likelihood of memory intensive transactions from running out of
+memory.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Read and Export Performance</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Added new types to org.neo4j.graphdb.schema.ConstraintType</b><span style="font-weight: 400;"> in the Core API.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Scale and Availability</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>DRYRUN </b><span style="font-weight: 400;">explains what the outcome
+of command will be on a cluster – without executing it.</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Created ‘synonyms’ cluster.raft. and cluster.storecopy </b><span style="font-weight: 400;">for the metrics cluster.core.cluster.readreplica.</span></li>
+</ul>
+<span style="font-weight: 400;">Cloud Native Operations</span>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Helm Charts for Neo4j 5</b><span style="font-weight: 400;"> support
+Autonomous Clustering, and automatically deploy the network load balancer in the Kubernetes Cluster.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Platform &amp; Supportability</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Migration from Neo4j 4.4 to Neo4j 5.2 </b><span style="font-weight: 400;">is supported please follow the migration guide available </span><a href="https://neo4j.com/docs/upgrade-migration-guide/current/"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><b>&nbsp;</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Any-to-any version rolling upgrade </b><span style="font-weight: 400;">provides a streamlined upgrade experience and supports from 5.0 to 5.2, then with support for direct upgrades to any version after 5.2.</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Packaging information file</b><span style="font-weight: 400;">
+provided under neo4j home.</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Upgraded Apache Shiro</b><span style="font-weight: 400;"> (included)
+from 1.9.1 to 1.10.0.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Fixes</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Composite / Fabric</b>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Fix bug with map projection in
+Fabric, where the value of the map projection is returned outside a subquery.</span></li>
+</ul>
+</li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Autonomous Clustering</b>
+<ul>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix bug where store copy failed to retry against certain remote
+servers due to issues with address locking logic.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Bug fix where a member in a two member raft group couldn’t be
+drained since it was wrongly considered unsafe.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Bug fix where the wrong artifact was chosen for databases with
+the same name but different database ids.</span></li>
+</ul>
+</li>
+ 	<li aria-level="1"><b>Cypher</b>
+<ul>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fixed a bug in pipelined execution graph construction, that
+could cause some queries with UNION inside an updating subquery to fail with the message “Could not find
+downstream argumentStateBuffer with id ArgumentStateMapId(x).”</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix bug in Expand(Into) where we could fail to find existing
+relationships if the same node is expanded multiple times.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix a bug where pressing ctrl+c in Cypher Shell would leave you
+in an infinite loop of IOException: Input/Output error errors.</span></li>
+</ul>
+</li>
+ 	<li aria-level="1"><b>Kernel</b>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Fix edge case where active
+transactions metrics were inconsistently decremented on closing a transaction, which led to
+&lt;prefix&gt;.database.transaction.active_read to potentially appear negative.</span></li>
+ 	<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Fixed possible crashes when using
+very small page cache sizes.</span></li>
+</ul>
+</li>
+ 	<li style="font-weight: 400;" aria-level="2"><strong>Security</strong>
+<ul>
+ 	<li>Bump commons-text 1.9 -&gt; 1.10.0 so as to address CVE-2022-42889</li>
+</ul>
+</li>
+</ul>
+<span style="font-weight: 400;">Please refer to the</span><a href="https://github.com/neo4j/neo4j/wiki/Neo4j-5-changelog#520"><span style="font-weight: 400;">
+changelog</span></a><span style="font-weight: 400;"> for full details of the changes.</span>
+

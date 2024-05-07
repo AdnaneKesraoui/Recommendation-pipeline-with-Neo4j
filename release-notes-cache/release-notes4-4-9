@@ -1,0 +1,148 @@
+
+			
+									<h5>Release Date: 18 July 2022</h5>
+				
+									Neo4j 4.4.9 is a maintenance release with many important improvements and fixes.
+
+				<h3 class="western"><a name="user-content-kernel"></a>Kernel</h3>
+				<ul>
+					<li><p>Fixes a bug where nodes not having the required property
+					for a node key constraint could be created during the creation
+					of the constraint. They would silently violate the constraint
+					and leave the database with a non-fulfilled node key constraint 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-cypher"></a>Cypher</h3>
+				<ul>
+					<li><p>Fixed bug where eagerness was handled incorrectly for
+					overlaps in labels for predicates.</p>
+					</li><li><p>Do not plan distinct unions for overly large type
+					disjunctions to avoid stack overflow errors</p>
+					</li><li><p>Fixes a bug where routing table requests may have
+					incorrectly returned a <code>DatabaseNotFound</code> exception
+					during an upgrade from 4.3 to 4.4</p>
+					<hr>
+
+					<p>In 4.4, a <code>:DatabaseName</code> label was added to both
+					existing <code>:Database</code> nodes, and also alias nodes. The
+					<code>CommunityTopologyGraphDbmsModel</code> uses the
+					<code>:DatabaseName</code> label in its CoreAPI queries when
+					attempting to look up a <code>DatabaseReference.Internal</code>
+					for a given string database name.</p>
+					<p>The issue is that during a rolling upgrade from 4.3 to 4.4,
+					on instances already running 4.4 the model code has been changed
+					<strong>and the routing table procedure has been updated to use
+					it</strong> but the <code>:DatabaseName</code> label has not yet
+					been created because users have not completed their upgrade or
+					called <code>dbms.upgrade()</code>.</p>
+					<p>This means that although a <code>:Database</code> node with
+					the correct name exists, the model will return <code>Optional.empty()</code>
+					instead of a database reference and the end user will see a
+					<code>DatabaseNotFound</code> error.</p>
+					<p>This PR fixes this by updating the model logic to also
+					consider <code>:Database</code> nodes without the <code>:DatabaseName</code>
+					label, should the correct name property match.</p>
+					<p>Thanks to @mnd999 for noticing the issue and pairing on it.</p>
+					</li><li><p>Fix bug in Reduce Expressions and List comprehensions
+					hiding variables that should be in scope
+					<a href="https://github.com/neo4j/neo4j/issues/12868">https://github.com/neo4j/neo4j/issues/12868</a></p>
+					</li><li><p>OuterHashJoin gives wrong result if the joining nodes are
+					from the outer apply. Fix: OuterHashJoin can only join on nodes
+					which are introduced in the leaves of OuterHashJoin. Github
+					issue <a href="https://github.com/neo4j/neo4j/issues/12836">https://github.com/neo4j/neo4j/issues/12836</a></p>
+					</li><li><p>Fix issue in planning a query with multiple repeated
+					predicates in the WHERE sub-clause, reported in
+					<a href="https://github.com/neo4j/neo4j/issues/12877">https://github.com/neo4j/neo4j/issues/12877</a></p>
+					</li><li><p>Upgrade Apache Shiro from <code>1.8.0</code> to <code>1.9.1</code>.
+					This version includes fixes for <code>CVE-2022-32532</code>.</p>
+					</li><li><p>Logical plans where the same variable is introduced in
+					multiple leaves can cause trouble with inserting eager, which
+					might make the query end up with incorrect results. Before this
+					fix we assumed that a variable was stable as long as it was
+					stable on one leaf. Fix: A variable should be considered
+					unstable if it is both unstable and stable. Fixes github issue:
+					<a href="https://github.com/neo4j/neo4j/issues/12878">https://github.com/neo4j/neo4j/issues/12878</a></p>
+					</li><li><p>Fix bug where, when there are two indexes on the same
+					property, the planner would sometimes try to get a value from an
+					index that doesn’t support it</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-packaging"></a>Packaging</h3>
+				<ul>
+					<li><p>Changed neo4j.service behaviour to stop neo4j getting
+					stuck in an endless restart loop when neo4j consistently errors
+					on startup (for example if the neo4j.conf is misconfigured). 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-causal-clustering"></a>Causal
+				Clustering</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Fixing that a database can get
+					stuck in store copying if it is stopped during store copy. 
+					</p>
+					</li><li><p>Fixing the "There is nothing to send." error
+					occuring in some scenarios at the end of a store copy. 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-browser"></a>Browser</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Modernize background queries &amp;
+					remove use of deprectated syntax 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Always send transaction
+					metadata on cypher queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Read cluster role from SHOW
+					DATABASES rather than deprecated dbms.cluster.role 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Make sure proper metadata is
+					passed along with queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Handle upcoming setting
+					renames in neo4j 5.0 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Fix PNG exports font 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Use SHOW TRANSACTIONS instead
+					of dbms.listQueries in :queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Re-add metrics for successful
+					queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">(*) in property panel now
+					shows node count, rather than total label count 
+					</p>
+					</li><li><p>Add url param to preselect in connect frame 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-docker"></a>Docker</h3>
+				<ul>
+					<li><p>Redhat are no longer supporting or updating the <code>openjdk</code>
+					docker images that we use as base images. This means there will
+					no longer be security updates to <code>openjdk</code> images
+					after July 2022.</p>
+					<ul>
+						<li><p style="margin-bottom: 0in"><a href="https://github.com/docker-library/openjdk/issues/505">https://github.com/docker-library/openjdk/issues/505</a>
+												</p>
+						</li><li><p><a href="https://github.com/docker-library/docs/pull/2162">https://github.com/docker-library/docs/pull/2162</a>
+												</p>
+					</li></ul>
+					<p>Switching Docker base image to <a href="https://hub.docker.com/_/eclipse-temurin">eclipse-temurin
+					AdoptOpenJDK java</a> built on top of <code>debian:bullseye-slim</code>.</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-misc"></a>Misc</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Stop leaking passwords to the
+					terminal when standard out is redirected. In situations like
+					<code>cypher-shell -u neo4j -f statements.cypher &gt; out.txt</code>.
+										</p>
+					</li><li><p>Fixed an edge case where a <code>None.get</code>
+					exception was thrown when referencing a fabric graph inside a
+					subquery, Github issue: neo4j/neo4j#12886 
+					</p>
+				</li></ul>
+
+
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">4.4 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>.				
+					

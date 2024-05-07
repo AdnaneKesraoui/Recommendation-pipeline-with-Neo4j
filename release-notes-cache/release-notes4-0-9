@@ -1,0 +1,21 @@
+
+			
+									<h5>Release Date: 13 November 2020</h5>
+				
+									Neo4j 4.0.9 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update dependencies due to security issues
+
+Jetty 9.4.17 -&gt; 9.4.34 – https://nvd.nist.gov/vuln/detail/CVE-2020-27216 Jersey 2.29 -&gt; 2.32 – SRCCLR-SID-3606 Jackson 2.10.0 -&gt; 2.10.5 – For version compatibility</li>
+   <li>Do not store connection passwords in local storage before receiving neo4j config</li>
+   <li>Special handling of unrelated SSL policies in the backup command</li>
+   <li>Fixes an issue where an unexpected concurrent closing of a page cursor which was in the middle of doing page faulting might leave a latch unreleased, trapping all future cursors that wanted to look at that page.</li>
+   <li>Fixed bug where clusters could get stuck bootstrapping in the event of network issues or instance restarts.</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

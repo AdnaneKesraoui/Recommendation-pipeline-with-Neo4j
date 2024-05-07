@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 1 July 2021</h5>
+				
+									Neo4j 4.3.2 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fix issue with relationship belonging to dense nodes in the high-limit format that could cause corruptions. This affects relationship types with ids larger than 65535.</li>
+   <li>Fix bug where queries that has a cartesian product of two node index seeks and IN/OR predicates can return incorrect property values and fail to honor query ordering</li>
+
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.3 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.3/">here</a>.				
+					

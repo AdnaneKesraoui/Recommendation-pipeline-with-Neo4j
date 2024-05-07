@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 24 March 2022</h5>
+				
+									Neo4j 4.3.11 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Improve how long a booting node can be leader to a database before being available to process transactions by transferring leadership sooner.</li>
+   <li>Fix error of the kind arraycopy: last source index 1 out of bounds for long[0]
+which could occur when a CartesianProduct was planned under a NestedPlanExpression in pipelined runtime</li>
+   <li>Update netty to 4.1.73.Final to address CVE-2021-43797. Whilst the affected code is not used, this will prevent it from incorrectly flagging it in security scanning tools</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.3 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.3/">here</a>.				
+					

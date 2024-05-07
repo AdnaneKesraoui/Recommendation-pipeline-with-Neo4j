@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 19 March 2021</h5>
+				
+									Neo4j 4.1.8 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update Netty to 4.1.60</li>
+   <li>Fix bug where a NullPointerException could occur for certain queries that reads from a ‘lucene+native-3.0’ index.</li>
+   <li>Fix bug where neo4j-admin copy would fail when upgrading from 3.5 store if fulltext indexes where present</li>
+
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

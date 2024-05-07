@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 30 March 2020</h5>
+				
+									Neo4j 4.0.3 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>Fixes a bug that can cause “non unique token” exceptions after upgrading a 3.5 store to 4.0.</li>
+   <li>Change scope of slf4j nop dependency to runtime in harnesses</li>
+   <li>Fix a bug in DETACH DELETE on dense nodes that could lead to inconsistencies.</li>
+   <li>Fix a bug where DETACH DELETE would not lock the relationships being deleted, allowing overlapping transactions to make changes, such as property updates and chain linkage changes, to those records, which could lead to inconsistencies.</li>
+
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

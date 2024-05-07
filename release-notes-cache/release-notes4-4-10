@@ -1,0 +1,81 @@
+
+			
+									<h5>Release Date: 8 August 2022</h5>
+				
+									Neo4j 4.4.10 is a maintenance release with many important improvements and fixes.
+
+				<h3 class="western"><a name="user-content-kernel"></a>Kernel</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Clean usage of deprecated
+					dbms.read_only in default neo4j.conf files. 
+					</p>
+					</li><li><p>Fixes a bug where some transaction objects could be
+					leaked instead of being released properly. 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-cypher"></a>Cypher</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">update neo4j-java-driver
+					version to 4.4.9 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Fix overflow in resource
+					manager. Users could get errors like
+					<code>java.lang.IllegalArgumentException: Expected positive long
+					value, got -8589934576</code> because of an overflow when trying
+					to grow the number of tracked resources. 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Fix a bug where SHOW
+					TRANSACTIONS would fail when transaction metadata contains types
+					that cannot be serialised to a property (e.g. List) 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Fix <code>bitIndex &lt; 0: -8</code>
+					bug when ordering pipelines for dynamic scheduling of
+					OrderedUnion 
+					</p>
+					</li><li><p>Added rewriter for shortestPath and allShortestPaths with
+					fixed length relationships to instead have a variable length of
+					one [r*1..1]. 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-browser"></a>Browser</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Modernize background queries &amp;
+					remove use of deprectated syntax 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Always send transaction
+					metadata on cypher queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Read cluster role from SHOW
+					DATABASES rather than deprecated dbms.cluster.role 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Make sure proper metadata is
+					passed along with queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Handle upcoming setting
+					renames in neo4j 5.0 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Fix PNG exports font 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Use SHOW TRANSACTIONS instead
+					of dbms.listQueries in :queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Re-add metrics for successful
+					queries 
+					</p>
+					</li><li><p style="margin-bottom: 0in">(*) in property panel now
+					shows node count, rather than total label count 
+					</p>
+					</li><li><p>Add url param to preselect in connect frame 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-docker"></a>Docker</h3>
+				<ul>
+					<li><p>Change base image to eclipse temurin JRE not JDK. The JDK
+					is overkill and could introduce unnecessary security issues. 
+					</p>
+				</li></ul>
+
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">4.4 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>.				
+					

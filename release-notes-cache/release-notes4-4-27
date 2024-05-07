@@ -1,0 +1,30 @@
+
+			
+									<h5>Release Date: 2 November 2023</h5>
+				
+									Neo4j 4.4.27 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Fixes an issue where terminating the creation of a Constraint, would not also terminate the creation of the backing Index.</li>
+<li>Fixes an issue where <code>neo4j-admin import</code> import could run on an online database. This could result in not seeing the imported data until after a restart.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Fix possible deadlock in transaction termination</li>
+<li>Improved planning of pattern predicates that previously weren’t using <code>Argument</code>.</li>
+<li>Solve a bug where Cypher queries containing related equalities in different scopes, e.g. <code>WHERE any(x IN [1, 2, 3] WHERE a.prop = toInteger(x)) AND a.prop = b.prop</code> would fail with <code>Variable ... not defined</code>. Disable the transitiveEqualities rewriter if the <code>WHERE</code> clause contains multiple scopes.</li>
+</ul>
+
+<h3>Docker</h3>
+<ul>
+<li>Bugfix where neo4j.conf without a trailing new line would get <code>NEO4J_PLUGINS</code> settings wrongly appended causing startup failure.</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

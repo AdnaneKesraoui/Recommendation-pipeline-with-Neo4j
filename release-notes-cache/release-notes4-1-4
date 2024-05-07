@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 9 November 2020</h5>
+				
+									Neo4j 4.1.4 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Special handling of unrelated SSL policies in the backup command</li>
+   <li>Allow transactions with both read queries and schema commands</li>
+   <li>Add procedure to set default database in cluster</li>
+   <li>Fixed bug where clusters could get stuck bootstrapping in the event of network issues or instance restarts.</li>
+   <li>Browser: Do not store connection passwords in local storage before receiving neo4j config</li>
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

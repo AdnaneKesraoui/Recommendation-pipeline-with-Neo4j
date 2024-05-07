@@ -1,0 +1,24 @@
+
+			
+									<h5>Release Date: 30 November 2020</h5>
+				
+									Neo4j 4.1.5 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes an issue scanning records in high_limit format, where trying to read a record which happened to be a secondary unit would throw exception or read invalid data instead of observing it as unused</li>
+   <li>Allow cross-version copy in neo4j-admin copy</li>
+   <li>Upgrade to Apache Shiro 1.7.0</li>
+   <li>This fixes a bug where upgrading from 3.5 directly to 4.1 would result in no PUBLIC role being created.</li>
+   <li>Allow cross-version copy in neo4j-admin copy</li>
+   <li>Update dependencies due to security issues
+
+Jetty 9.4.26 -&gt; 9.4.34 – https://nvd.nist.gov/vuln/detail/CVE-2020-27216 Jersey 2.30.1 -&gt; 2.32 – SRCCLR-SID-3606 Jackson 2.11.0 -&gt; 2.11.3 – For version compatibility</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

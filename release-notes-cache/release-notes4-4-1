@@ -1,0 +1,23 @@
+
+			
+									<h5>Release Date: 14 December 2021</h5>
+				
+									Neo4j 4.4.1 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update Log4j to 2.15.0 to address CVE-2021-44228</li>
+
+   <li>Fixes a bug where queries like MATCH (a:A) RETURN count(a.prop) would return the wrong results if there is a uniqueness constraint on label A and property prop</li>
+   <li>Fix unnecessary Eager planned between MATCH and MERGE on different labels.</li>
+   <li>Fixes exception “org.neo4j.exceptions.CypherTypeException: Property values can only be of primitive types or arrays thereof” thrown when concatenating a list with an empty list.</li>
+   <li>CSV Import: add support for array data types point[], date[], time[], datetime[], localtime[], localdatetime[], duration[]</li>
+   <li>Bug fix: Neo4j now also accepts datetime expressions including an offset of times immediately after switching from summer time to winter time.</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.4 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.4/">here</a>.				
+					

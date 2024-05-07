@@ -1,0 +1,23 @@
+
+			
+									<h5>Release Date: 16 May 2022</h5>
+				
+									Neo4j 4.3.13 is a maintenance release with many important improvements and fixes.
+
+				<h3><a name="user-content-browser"></a>Browser</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Export plan txt and make
+					download dropdown context dependent 
+					</p>
+					</li><li><p style="margin-bottom: 0in">Set SSO as default if sso
+					providers were present 
+					</p>
+					</li><li><p>Fix bug causing autocomplete to no longer work 
+					</p>
+				</li></ul>
+
+
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">4.3 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.3/">4.3 Operations manual</a>.				
+					

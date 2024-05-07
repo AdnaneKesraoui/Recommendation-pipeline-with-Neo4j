@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 4 January 2021</h5>
+				
+									Neo4j 3.5.26 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+  <li>Update jetty to address security vulnerability CVE-2020-27218</li>
+  <li>Fixes an issue with over-assigning threads during import which could lead to scheduling problems and sub-optimal performance</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-3.5-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 3.5 Operations manual <a href="https://neo4j.com/docs/operations-manual/3.5/">here</a>.
+<h3>Upgrading</h3>
+When upgrading to Neo4j 3.5 for the first time, be sure to read the current upgrade instructions in the <a href="https://neo4j.com/docs/operations-manual/3.5/upgrade/" target="_blank" rel="noopener noreferrer">Neo4j Operations Manual</a>, as there are additional steps and considerations.				
+					

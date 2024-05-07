@@ -1,0 +1,13 @@
+
+			
+									<h5>Release Date: 6 September 2022</h5>
+				
+									Neo4j 4.3.18 is a maintenance release with many important improvements and fixes.
+<h3>Cypher</h3>
+<ul>
+ 	<li>code review and more accurate documentation of the Traversal API</li>
+</ul>
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">4.3 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.3/">4.3 Operations manual</a>.				
+					

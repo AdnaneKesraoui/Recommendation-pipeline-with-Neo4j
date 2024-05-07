@@ -1,0 +1,53 @@
+
+			
+									<h5>Release Date: 23 June 2020</h5>
+				
+									We are proud to announce the general availability of our Neo4j Database – Neo4j Enterprise Edition 4.1.
+
+
+Neo4j 4.1 is the core technology of the <a href="https://neo4j.com/product/?ref=release-notes">Neo4j Graph Platform</a>.
+<h3>Important Information</h3>
+
+This release is generally available and ready for production.
+<h3>Highlights</h3>
+<ul>
+ 	<li><b>Graph privileges in Role-Based Access Control (RBAC) security</b> – The new privileges provide fine-grained control over write operations in a graph: administrators can grant, deny or revoke users the privilege to create, delete or overwrite a graph element, create, remove or update a property, create or remove a node label.</li>
+ 	<li><b>Database privileges for transaction management</b> – Administrators can grant, deny or revoke users the privilege to show or terminate transactions executed by a given list of users in a given list of databases.</li>
+ 	<li><b>Database management privileges</b> – Administrators can grant, deny or revoke users the privilege to create, or remove databases.</li>
+ 	<li><b>User management privileges</b> – Administrators can grant, deny or revoke users the privilege to create, modify, remove or show users in a standalone or clustered environment.</li>
+ 	<li><b>Role and privilege management privileges</b> – Administrators can grant, deny or revoke users the privilege to create, modify, remove, assign or show roles in a standalone or clustered environment. Privileges are also set to assign, remove or show privileges in roles.</li>
+ 	<li><b>PUBLIC built-in role</b> – The PUBLIC role is automatically assigned to all users, it allows administrators to set a default security model for a standalone or clustered environment.</li>
+ 	<li><b>SHOW commands improvements</b> – The SHOW DATABASES, SHOW PRIVILEGES, SHOW ROLES and SHOW USERS commands provide new filtering and sorting capabilities for columns and rows.</li>
+ 	<li><b>Rolling upgrades improvements</b> – Clustered installations can be upgraded without downtime. Rolling upgrades can be applied from any patch to the next patched version. This feature is also available when administrators upgrade Neo4j from any 4.0 version to 4.1.</li>
+ 	<li><b>Memory management settings and memory monitoring procedures</b> – Administrators can set the amount of heap space used to manage transactions. Settings are per trasanction, per database and for the whole DBMS. Transactions that exceed the threshold are killed. The amount of memory used by transactions or by other internal components can be monitored with the use of the two procedures dbms.listTransactions() and dbms.listPools().</li>
+ 	<li><b>Embedded Causal Clustering</b> – Neo4j 4.1 can be used as a library embedded into custom applications, either as a standalone system or as a clustered environment using the Raft consensus protocol available with Causal Cluster.</li>
+ 	<li><b>Cluster Leadership Control</b> – Neo4j 4.1 provides more control over the leadership transfer with the Raft consensus protocol. Administrators can define preferrable leaders in order to balance readonly and readwrite operations according to the system infrastructure, for example when a cluster is formed by members in multiple data centers.</li>
+ 	<li><b>Cluster Leadership Balancing</b> – In Neo4j 4.1, leaders of different Raft groups in a multidatabase environment can be automatically balanced among the members of the cluster.</li>
+ 	<li><b>Cypher Query Replanning Option</b> – Query replanning can be controlled with pre-parser options of Cypher. Queries can be forced to be replanned or the replanning can be skipped, overrulling the threshold rules in place for planning. This is particularly efficient when administrators set up batched replanning scripts and seek for more predictable query response times during interactive operations.</li>
+ 	<li><b>Cypher PIPELINED Runtime operators</b> – The PIPELINED runtime can now serve more than 85% of the cases in read queries. Query performance are generally better with the new runtime compared to the still available SLOTTED runtime: tests show throughput improvements from 10% to 35%, depending on scale factor.</li>
+ 	<li><b>Improvements in EXPLAIN and PROFILE commands</b> – In Neo4j 4.1, EXPLAIN and PROFILE output provide more details of the query plan adopted by the Cypher runtime. Improvements include operator specific information, multirow descriptions, variables used in the query execution and memory usage.</li>
+ 	<li><b>Database routing in Cypher</b> – Cypher DML and DDL commands can be preceeded by a USE <database> clause that allows a user to route a query to a specific database.</database></li>
+ 	<li><b>Automatic routing of administration commands</b> – Cypher administration commands used for authentication and authorization management, database management etc. are automatically routed to the system database. Prior to Neo4j 4.1, administrators had to instantiate a new session to the system database in order to issue and administration command.</li>
+ 	<li><b>Server-side routing for read/write queries in a clustered environment</b> – In Neo4j 4.1 a client application can connect to any member of a cluster, the Cypher runtime can route readwrite transactions to the leader of a Raft group, whilst readonly transactions can be executed by any member of the cluster. In order to use this feature, client applications must use 4.1 compatible drivers.</li>
+ 	<li><b>New configuration for Bolt connections</b> – The internal Bolt server in Neo4j 4.1 provides settings to keep the connection alive during long running transactions. This setting is particularly useful in environments where load balancers and firewalls have strict rules over the killing of idle connections. The new settings also provide a better prevention over malificent client attacks with unsuccessful authentication.</li>
+</ul>
+
+The documentation is available <a href="https://neo4j.com/docs/operations-manual/4.1">here</a>.
+<h3>Available Packages</h3>
+<ul>
+ 	<li><a href="https://neo4j.com/download-center">Linux/Mac OS tarball</a></li>
+ 	<li><a href="https://s3-eu-west-1.amazonaws.com/dist.neo4j.org/deb/neo4j-enterprise_4.1.0_all.deb">Debian/Ubuntu deb</a></li>
+ 	<li><a href="https://s3-eu-west-1.amazonaws.com/dist.neo4j.org/rpm/neo4j-enterprise-4.1.0-1.noarch.rpm">Red Hat/CentOS rpm</a></li>
+ 	<li><a href="https://neo4j.com/download-center">Windows zip file</a></li>
+ 	<li><a href="https://hub.docker.com/_/neo4j/">Docker image</a></li>
+</ul>
+<h3>Available Linux Repositories</h3>
+<ul>
+ 	<li><a href="https://neo4j.com/docs/operations-manual/4.1/installation/linux/debian/">Debian/Ubuntu apt</a></li>
+ 	<li><a href="https://neo4j.com/docs/operations-manual/4.1/installation/linux/rpm/">Red Hat/CentOS yum</a></li>
+</ul>
+<h3>Upgrading to Neo4j EE 4.1</h3>
+In order to migrate from Neo4j 3.5 to Neo4j 4.0 or 4.1, follow the migration guide available <a href="https://neo4j.com/docs/migration-guide/">here</a>.<br>
+The process to upgrade from Neo4j 4.0 to Neo4j 4.1 is described <a href="https://neo4j.com/docs/operations-manual/4.1/upgrade/">here</a>.
+<hr>				
+					

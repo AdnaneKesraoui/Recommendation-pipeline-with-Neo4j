@@ -1,0 +1,118 @@
+
+<h2 id="release-5_1"><b>Neo4j 5.1 </b><span style="font-weight: 400;">(24 October 2022)</span></h2>
+<span style="font-weight: 400;">&nbsp;The General Availability Release</span>
+<h3><span style="font-weight: 400;">Highlights</span></h3>
+<h4><span style="font-weight: 400;">Products included</span></h4>
+<span style="font-weight: 400;">The following products have been included in the distribution – available in /products
+directory – and are fully compatible with this release.&nbsp;</span>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Bloom 2.4.1</b><span style="font-weight: 400;">&nbsp;– A beautiful and
+expressive data visualization tool to quickly explore and interact with Neo4j’s graph data platform – no coding
+required. Please refer to the</span><a href="https://neo4j.com/release-notes/bloom/bloom-2.4.1"><span style="font-weight: 400;"> release notes</span></a><span style="font-weight: 400;"> for more details of what is
+available in this release.&nbsp; </span><b>(Requires a License)</b></li>
+ 	<li><b>Neo4j Browser 5.0.0</b><span style="font-weight: 400;"> – Browser is&nbsp;a tool for developers to interact with the
+graph. It is the default interface for both Enterprise and Community Editions of the Neo4j database.</span><span style="font-weight: 400;">&nbsp;</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Neo4j Graph Data Science 2.2.2 </b><span style="font-weight: 400;">is
+a connected data analytics and machine learning platform that helps you understand the connections in big data to
+answer critical questions and improve predictions. Please refer to the</span><a href="https://neo4j.com/release-notes/gds/graph-data-science-2-2-2/"><span style="font-weight: 400;"> release
+notes</span></a><span style="font-weight: 400;">&nbsp; for more details of what is available in this release.
+</span><b>(<a href="https://neo4j.com/docs/graph-data-science/current/installation/installation-enterprise-edition/">GDS
+Enterprise requires a License</a>)</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Neo4j Ops Manager 1.2 </b><span style="font-weight: 400;">is a
+UI-based tool that enables Administrators to operate and observe all of their Neo4j Database Management Servers.
+Please refer to the </span><a href="https://neo4j.com/release-notes/nom/neo4j-ops-manager-1-2-1/"><span style="font-weight: 400;">release notes</span></a><span style="font-weight: 400;">&nbsp; for more details of what is
+available in this release. </span><b>(Included in Enterprise)</b><span style="font-weight: 400;">.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Surface for Developers and Data Scientists&nbsp;</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Improved messaging in Browser for startup of newly created
+databases</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Browser support connecting to cluster members without a default
+database.</b></li>
+ 	<li><b>Procedures can specify an analyzer for Full Text queries</b></li>
+</ul>
+<h4><span style="font-weight: 400;">Language and Graph Model</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Include Europe/Kyiv in the list of time zones in Cypher to</b><span style="font-weight: 400;">, as per IANA 2020b.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Write and Import Performance</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Incremental Import CSV header supports id-type </b><span style="font-weight: 400;">to specify the value type for ID for a group e.g: id:ID(MyGroup){label:MyLabel, id-type:
+int}.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Read and Export Performance</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Trigram Analyzer </b><span style="font-weight: 400;">provides
+significantly faster Full Text searches.</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Range seek Index Searches are consistent </b><span style="font-weight: 400;">with non-Indexed range searches – does not match Not a Number (NaN).</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Scale and Availability</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Autonomous Clusters support Server Side Routing for Reads</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b> Set or update the TOPOLOGY without specifying PRIMARY </b><span style="font-weight: 400;">so that you can keep the defaults or existing settings.</span></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Default database is created and allocated on a best-effort
+basis</b><span style="font-weight: 400;"> to initial members during dbms creation.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Platform &amp; Supportability</span></h4>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Migration from Neo4j 4.4 to Neo4j 5.1 </b><span style="font-weight: 400;">is supported please follow the migration guide available </span><a href="https://neo4j.com/docs/upgrade-migration-guide/current/version-5/"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><b>&nbsp;</b></li>
+ 	<li style="font-weight: 400;" aria-level="1"><b>Any-to-any version rolling upgrade </b><span style="font-weight: 400;">provides a streamlined upgrade experience and supports from 5.0 to 5.1, then with support for direct upgrades to any version after 5.1.</span></li>
+</ul>
+<h4><span style="font-weight: 400;">Fixes</span></h4>
+<ul>
+ 	<li aria-level="1"><b>APIs</b>
+<ul>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fixes a memory leak issue when using the Transactional HTTP API
+(GitHub </span><a href="https://github.com/neo4j/neo4j/issues/12945"><span style="font-weight: 400;">ref</span></a><span style="font-weight: 400;">)</span></li>
+</ul>
+</li>
+ 	<li aria-level="1"><b>Browser</b>
+<ul>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix sysinfo depending on a setting no longer in 5.0.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix northwind data not loading properly due to https
+redirect.</span></li>
+</ul>
+</li>
+ 	<li aria-level="1"><b>Autonomous Clustering</b>
+<ul>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix deadlock in RaftDrainingService area</span></li>
+</ul>
+</li>
+ 	<li aria-level="1"><b>Cypher</b>
+<ul>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix </span><a href="https://github.com/neo4j/neo4j/issues/12926"><span style="font-weight: 400;">issue</span></a><span style="font-weight: 400;"> where performance regressed for queries with “impossible predicates”</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix bug where a user could change the database topology with
+incorrect privileges.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix bug in pipelined runtime where some queries using
+assertingMultiNodeIndexSeekOperator would fail incorrectly with Merge did not find a matching node…. For
+example in queries like UNWIND [0,1] AS id MERGE (n:A:B {id: id}), if there is a uniqueness constraint on the
+id property for both A and B labels.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix bug in pipelined runtime where
+AssertingMultiNodeIndexSeekOperator failed to perform locking index seeks. This could lead to failures when
+running concurrent transactions in queries like MERGE (n:A:B {id: x}) when we have a uniqueness constraint on
+id for both labels A and B.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fixed bug where DROP DATABASE … IF EXISTS and ALTER DATABASE
+… IF EXISTS … could give DatabaseNotFoundException when there exists a remote database alias with the
+name.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fixed bug for having * and order by id in same RETURN
+clause</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix a bug where SHOW DATABASES may not include all servers for
+a database if the servers have the same value for server.bolt.advertised_address</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix a bug with memory tracking in CALL IN TRANSACTION that
+could lead to an exception with the message “Expected non-negative long value …”.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix bug where columns could be swapped for UNION
+queries.</span></li>
+ 	<li aria-level="1"><span style="font-weight: 400;">Fix a bug in pipelined runtime that can cause incorrect row
+ordering in queries that leverage order and contain an aggregation.</span></li>
+</ul>
+</li>
+ 	<li aria-level="1"><b>Kernel</b>
+<ul>
+ 	<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Fixes a bug that caused XML logging
+files not to be included in neo4j-admin server report</span></li>
+</ul>
+</li>
+</ul>
+<span style="font-weight: 400;">Please refer to the</span><a href="https://github.com/neo4j/neo4j/wiki/Neo4j-5-changelog#510"><span style="font-weight: 400;">
+changelog</span></a><span style="font-weight: 400;"> for full details of the changes..</span>
+

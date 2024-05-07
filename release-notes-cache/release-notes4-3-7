@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 9 November 2021</h5>
+				
+									Neo4j 4.3.7 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes another issue where a created node/relationship with several properties, which was also indexed (on at least one of the properties) and later deleted within the same transaction, would still be found by an index lookup after it was deleted.</li>
+   <li>4.3 Remove Leader selection log spam</li>
+
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.3 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.3/">here</a>.				
+					

@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 3 November 2022</h5>
+				
+									Neo4j 4.3.20 is a maintenance release with many important improvements and fixes.
+<h3>Kernel</h3>
+<ul>
+ 	<li>Bump commons-text 1.9 -&gt; 1.10.0 so as to address CVE-2022-42889</li>
+</ul>
+<h3><a id="user-content-cypher" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog#cypher" aria-hidden="true"></a>Cypher</h3>
+<ul>
+ 	<li>Fix a bug in pipelined runtime that can cause incorrect row ordering in queries that leverage order and contain an aggregation.</li>
+ 	<li>Upgraded Apache Shiro from 1.9.1 to 1.10.0</li>
+</ul>
+<h3><a id="user-content-clustering" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog#clustering" aria-hidden="true"></a>Clustering</h3>
+<ul>
+ 	<li>Fix bug where store copy failed to retry against certain remotes due to issues with address locking logic.</li>
+</ul>				
+					

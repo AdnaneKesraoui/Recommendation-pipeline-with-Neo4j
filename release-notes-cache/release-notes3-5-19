@@ -1,0 +1,22 @@
+
+			
+									<h5>Release Date: 15 June 2020</h5>
+				
+									Neo4j 3.5.19 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>The BatchInserter now honours the dbms.read_only setting. Furthermore, read-only batch inserters are faster to shut down because they don’t rebuild indexes</li>
+   <li>Planner bugfix to avoid cases where the planner gives up without considering all possible plans</li>
+   <li>Fix displaying large integers in new table correctly</li>
+   <li>Fix only executing relevant background queries (auth, cluster)</li>
+   <li>Fixes issue where created indexes would stop being resampled after restart</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-3.5-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 3.5 Operations manual <a href="https://neo4j.com/docs/operations-manual/3.5/">here</a>.
+<h3>Upgrading</h3>
+When upgrading to Neo4j 3.5 for the first time, be sure to read the current upgrade instructions in the <a href="https://neo4j.com/docs/operations-manual/3.5/upgrade/" target="_blank" rel="noopener noreferrer">Neo4j Operations Manual</a>, as there are additional steps and considerations.				
+					

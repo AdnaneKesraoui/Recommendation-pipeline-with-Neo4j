@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 6 September 2021</h5>
+				
+									Neo4j 4.2.11 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes an issue where neo4j-admin copy would not complete if there were “enough” deleted node records from the source database. The copy would hang in sorting the sourceDbNodeId –&gt; targetDbNodeId data structure.</li>
+   <li>Set checkpoint log version field on recovery</li>
+   <li>Causal Clustering: Transform all hostname characters to lower case</li>
+   <li>Browser: Fix main editor fullscreen resize bug</li>
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.2-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.2 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.2/">here</a>.				
+					

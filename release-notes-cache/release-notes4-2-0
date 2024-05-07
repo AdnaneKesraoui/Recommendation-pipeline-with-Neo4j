@@ -1,0 +1,150 @@
+
+			
+									<h5>Release Date: 17 November 2020</h5>
+				
+									We are proud to announce the general availability of our Neo4j Database – Neo4j 4.2 Enterprise Edition.
+
+Neo4j 4.2 is the core technology of the <a href="https://neo4j.com/product/?ref=release-notes">Neo4j Graph Platform</a>.
+
+<h3>Important Information</h3>
+This release is generally available and ready for production.
+
+<h3>Highlights</h3>
+
+<h4>Administration</h4>
+<ul>
+        <li><b>ALIGNED store format</b> – A new store format that reduces the total number of I/O operations can be set at startup for new databases.</li>
+ 	<li><b>Procedures to observe the internal scheduler</b> – New functions to observe the execution of background tasks have been introduced.</li>
+ 	<li><b>Dynamic settings at startup</b> – Configuration can be set using the new –expand-commands argument and by executing calls to external components prior to startup.</li>
+ 	<li><b>WAIT/NOWAIT in Database Management</b> – Command to manage databases (CREATE/DROP/START/STOP) can be executed with a WAIT or NOWAIT option. With WAIT, a user can wait up to the completion of the command, a timeout or a given number of seconds.</li>
+ 	<li><b>Index and constraint administration commands</b> – Cypher provides commands to create, drop and view indexes and constraints (CREATE/DROP/SHOW INDEX/CONSTRAINT).</li>
+ 	<li><b>Filtering in SHOW commands</b> – Cypher SHOW commands provide a new, simple way to retrieve a selection of columns, filter and aggregate the results.</li>
+ 	<li><b>Backup/Restore improvements</b> – DBAs can create backups and restore databases in a multi-database environment with more sophisticated features: metadata can be saved aside of a database and applied to their restore on demand, multiple or all databases can be backed up or restored.</li>
+ 	<li><b>Compress metrics on rotation</b> – CSV metric files can be compressed on rotation.</li>
+ 	<li><b>Database namespace for metrics</b> – Metrics can be organized per database on request.</li>
+ 	<li><b>neo4j-admin improvements</b> – The tool has improvements in operations for “copy”, “store-info” and “memrec”.</li>
+ 	<li><b>HTTP port selective settings</b> – The HTTP ports can be enabled or disabled separately for Browser, HTTP API, transactional endpoints, management endpoints and unmanaged extensions.</li>
+</ul>
+
+<h4>Causal Cluster</h4>
+<ul>
+ 	<li><b>Run/Pause Read Replicas</b> – The replication of individual databases can be paused or resumed in read replicas.</li>
+ 	<li><b>Database quarantine</b> – Databases with internal errors can be selectively quarantined on a member of the cluster.</li>
+</ul>
+
+<h4>Cypher</h4>
+<ul>
+ 	<li><b>Planner improvements</b> – Cypher planner has extended the use of the “index-backed order by” feature, i.e. it may set more efficient plans in more cases when an ORDER BY clause is present and it is supported by an index.</li>
+ 	<li><b>Octal literals – Octal numbers in Cypher queriey in Neo4j 4.2 start with ‘0o’</b> – Cypher .</li>
+</ul>
+
+<h4>Functions and Procedures</h4>
+<ul>
+ 	<li><b>round() function</b> – round() has been improved to select the precision of the returned value.</li>
+ 	<li><b>dbms.functions() procedure</b> – functions are organised in categories.</li>
+</ul>
+
+<h4>Security</h4>
+<ul>
+ 	<li><b>Procedures and user defined function privileges</b> – DBAs can grant, deny or revoke access for user to specific procedures and user-defined functions. Users may also have access with boosted privileges, compared to their current security profile.</li>
+ 	<li><b>Role-Based Access Control Default graph</b> – Permissions can be granted, denied or revoked against the default graph, regardless of the default setting.</li>
+ 	<li><b>PLAINTEXT and ENCRYPTED password in user creation</b> – Passwords can be set in plain text or in a one-way encrypted format on request.</li>
+ 	<li><b>SHOW CURRENT USER</b> – Users can see the profile of their current user.</li>
+ 	<li><b>SHOW PRIVILEGES as commands</b> – DBAs can visualize the commands to execute to recreate a security profile.</li>
+ 	<li><b>OCSP stapling support for Java driver</b> – The driver provides support for OCSP stapling.</li>
+</ul>
+
+<h3>Important Changes</h3>
+We made some changes in the behavior of new Neo4j installations. In general, upgrades are not affected by the change, but please check carefully this list, but there two exceptions:
+<ol>
+    <li>The metrics.filter setting has been introduced and by default it reduces the number of metrics collected also in upgraded installations.</li>
+    <li>JMX metrics, governed by metrics.jmx.enabled is set to false by default.</li>
+</ol>
+This is the complete list of changes:
+<ul>
+ 	<li><b>metrics.csv.interval</b> – In new installations, the default value is 30 seconds (it was 3 seconds).</li>
+ 	<li><b>metrics.csv.rotation.compression</b> – This is a new parameter, CSV metric files are compressed on rotation by default (they were not compressed in previous versions).</li>
+ 	<li><b>metrics.jmx.enabled</b> – In new installations, JMX metrics are disabled by default.</li>
+ 	<li><b>metrics.filter</b> – The number of metrics set by default has been reduced. The current default set includes:
+            <ul>
+                <li>bolt.connections</li>
+                <li>bolt.messages_received</li>
+                <li>bolt.messages_started</li>
+                <li>dbms.pool.bolt.free</li>
+                <li>*dbms.pool.bolt.total_size</li>
+                <li>*dbms.pool.bolt.total_used</li>
+                <li>*dbms.pool.bolt.used_heap</li>
+                <li>*causal_clustering.core.is_leader</li>
+                <li>*causal_clustering.core.last_leader_message</li>
+                <li>*causal_clustering.core.replication_attempt</li>
+                <li>*causal_clustering.core.replication_fail</li>
+                <li>*check_point.duration</li>
+                <li>*check_point.total_time</li>
+                <li>*cypher.replan_events</li>
+                <li>*ids_in_use.node</li>
+                <li>*ids_in_use.property</li>
+                <li>*ids_in_use.relationship</li>
+                <li>*pool.transaction..total_used</li>
+                <li>pool.transaction..used_heap</li>
+                <li>pool.transaction..used_native</li>
+                <li>store.size</li>
+                <li>transaction.active_read</li>
+                <li>*transaction.active_write</li>
+                <li>*transaction.committed</li>
+                <li>transaction.last_committed_tx_id</li>
+                <li>*transaction.peak_concurrent</li>
+                <li>*transaction.rollbacks</li>
+                <li>page_cache.hit</li>
+                <li>page_cache.page_faults</li>
+                <li>*page_cache.usage_ratio</li>
+                <li>*vm.file.descriptors.count</li>
+                <li>*vm.gc.time</li>
+                <li>vm.heap.used</li>
+                <li>*vm.memory.buffer.direct.used</li>
+                <li>*vm.memory.pool.g1_eden_space</li>
+                <li>*vm.memory.pool.g1_old_gen</li>
+                <li>*vm.pause_time</li>
+                <li>*vm.thread</li>
+            </ul>
+        </li>
+</ul>
+
+<h3>Deprecations</h3>
+The following procedures and functions have been deprecated:
+<ul>
+    <li>“whitelist” settings have been replaced by “allowlist” settings: dbms.dynamic.setting.whitelist, dbms.memory.pagecache.warmup.preload.whitelist, dbms.security.procedures.whitelist and dbms.security.http_auth_whitelist.</li>
+    <li>Log rotation delay settings: dbms.logs.security.rotation.delay, dbms.logs.user.rotation.delay, dbms.logs.debug.rotation.delay. These settings are no longer needed after replacing the custom logging framework with log4j.</li>
+    <li>Log and logger interfaces: debugLogger, InforLogger, warnLogger, errorLogger and bulk method on the Log interface. The debug ,info, warn and error methods on the Log interface can be used directly instead.</li>
+    <li>Octal syntax: writing octals with syntax 0… is deprecated in favor of new 0o….</li>
+    <li>Hexadecimal syntax: writing hexadecimals with syntax 0X… is deprecated since 0x… is favored</li>
+    <li>db.createIndex(): deprecated in favor of the CREATE INDEX command</li>
+    <li>db.createNodeKey(): deprecated in favor of the CREATE CONSTRAINT … IS NODE KEY command</li>
+    <li>db.createUniquePropertyConstraint(): deprecated in favor of the CREATE CONSTRAINT … IS UNIQUE command</li>
+    <li>db.indexes(): replaced by SHOW INDEXES</li>
+    <li>db.indexDetails(): replaced by SHOW INDEXES VERBOSE OUTPUT</li>
+    <li>db.constraints(): replaced by SHOW CONSTRAINTS</li>
+    <li>db.schemaStatements(): replaced by SHOW INDEXES VERBOSE OUTPUT and SHOW CONSTRAINTS VERBOSE OUTPUT</li>
+    <li>dbms.security.procedures.roles: replaced by EXECUTE BOOSTED privileges (for both procedures and user-defined functions)</li>
+    <li>dbms.security.procedures.default_allowed: replaced by EXECUTE BOOSTED privileges (for both procedures and user-defined functions)</li>
+    <li>When an expression is returned by a subquery, a warning is raised if it does not have an alias</li>
+</ul>
+
+The documentation is available <a href="https://neo4j.com/docs/operations-manual/4.2">here</a>.
+<h3>Available Packages</h3>
+<ul>
+ 	<li><a href="https://neo4j.com/download-center">Linux/Mac OS tarball</a></li>
+ 	<li><a href="https://s3-eu-west-1.amazonaws.com/dist.neo4j.org/deb/neo4j-enterprise_4.2.0_all.deb">Debian/Ubuntu deb</a></li>
+ 	<li><a href="https://s3-eu-west-1.amazonaws.com/dist.neo4j.org/rpm/neo4j-enterprise-4.2.0-1.noarch.rpm">Red Hat/CentOS rpm</a></li>
+ 	<li><a href="https://neo4j.com/download-center">Windows zip file</a></li>
+ 	<li><a href="https://hub.docker.com/_/neo4j/">Docker image</a></li>
+</ul>
+<h3>Available Linux Repositories</h3>
+<ul>
+ 	<li><a href="https://neo4j.com/docs/operations-manual/4.2/installation/linux/debian/">Debian/Ubuntu apt</a></li>
+ 	<li><a href="https://neo4j.com/docs/operations-manual/4.2/installation/linux/rpm/">Red Hat/CentOS yum</a></li>
+</ul>
+<h3>Upgrading to Neo4j 4.2 Enterprise Edition</h3>
+In order to migrate from Neo4j 3.5 to Neo4j 4.0, 4.1 or 4.2, follow the migration guide available <a href="https://neo4j.com/docs/migration-guide/">here</a>.<br>
+The process to upgrade from Neo4j 4.0 or 4.1 to Neo4j 4.2 is described <a href="https://neo4j.com/docs/operations-manual/upgrade/">here</a>.
+<hr>				
+					

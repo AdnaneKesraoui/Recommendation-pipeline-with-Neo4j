@@ -1,0 +1,59 @@
+
+			
+									<h5>Release Date: 16 May 2022</h5>
+				
+									Neo4j 4.4.7 is a maintenance release with many important improvements and fixes.
+
+				<h3><a name="user-content-kernel"></a>Kernel</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">Core API blocked from creating
+					composite point indexes. Only single-property point indexes are
+					supported 
+					</p>
+					</li><li><p>Closing relevant CSV metrics writers when database is
+					shut down 
+					</p>
+				</li></ul>
+				<h3><a name="user-content-cypher"></a>Cypher</h3>
+				<ul>
+					<li><p style="margin-bottom: 0in">added support for remote
+					aliases, transparently proxying queries to remote neo4j
+					instances. 
+					</p>
+					</li><li><p>Fix bug in Cypher Shell where multi line queries with
+					comments was parsed incorrectly. 
+					</p>
+				</li></ul>
+				<h3><a name="user-content-causal-clustering"></a>Causal
+				Clustering</h3>
+				<ul>
+					<li><p>Fix bug where prefetching log entries could get stuck,
+					unable to read new entries from the log. 
+					</p>
+				</li></ul>
+				<h3><a name="user-content-tools"></a>Tools</h3>
+				<ul>
+					<li><p>Ignore duplicate property keys in <code>neo4j-admin copy</code></p>
+					<p>The consistency checker will verify that a single node or
+					relationship doesn’t have the same property twice. E.g. A node
+					has both <code>n.name="foo"</code> and <code>n.name="bar"</code>.
+					This will be reported as:</p>
+					<pre style="margin-bottom: 0.2in"><code>ERROR The property chain contains multiple properties that have the same property key-id, which means that the entity has at least one duplicate property</code></pre><p>
+					This case was not properly handled by <code>neo4j-admin copy</code>
+					and the resulting store would still be inconsistent. Now we
+					filter out duplicate properties, keeping the first value found,
+					and discarding all subsequent values. All removals will be
+					logged into the summary.</p>
+				</li></ul>
+				<h3><a name="user-content-browser"></a>Browser</h3>
+				<ul>
+					<li><p>Fix bug causing autocomplete to no longer work 
+					</p>
+				</li></ul>
+
+
+
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">4.4 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>.				
+					

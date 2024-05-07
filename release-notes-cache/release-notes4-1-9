@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 12 May 2021</h5>
+				
+									Neo4j 4.1.9 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Bump Netty to 4.1.63</li>
+   <li>Fix an issue where creating or altering a user and setting their username and password to the same parameter would fail</li>
+   <li>Admin commands stop using the ‘Xms’ heap setting</li>
+   <li>Fix a bug where a transaction might be rolled back when performing multiple writes where the database catalog is changed concurrently.</li>
+   <li>Fixes an issue with the length and size functions returning 1 instead of throwing an error for unsupported input values</li>
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

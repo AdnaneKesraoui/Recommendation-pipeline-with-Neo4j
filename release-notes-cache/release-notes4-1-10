@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 6 July 2021</h5>
+				
+									Neo4j 4.1.10 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update jersey to 2.34 to address CVE-2021-28168</li>
+   <li>Bump commons io to 2.9 to address VULNDB-239195</li>
+   <li>Fix issue with relationship belonging to dense nodes in the high-limit format that could cause corruptions. This affects relationship types with ids larger than 65535</li>
+   <li>Don’t overflow on –9223372036854775808. Github issue: neo4j/neo4j#12726</li>
+   <li>Fix a bug where the security context on a transaction was being overridden to allow administration commands to be run, but was not properly being reset to the previous state.</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

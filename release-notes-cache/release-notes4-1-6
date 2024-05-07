@@ -1,0 +1,22 @@
+
+			
+									<h5>Release Date: 19 January 2021</h5>
+				
+									Neo4j 4.1.6 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes a record format store upgrade issue from standard to aligned format, where the property store wouldn’t be migrated properly</li>
+   <li>Fixes an issue in consistency checker where the checker would throw exception and fail if discovering a uniqueness index w/o any reference to the constraint</li>
+   <li>Fix issue with compiled expressions where an error saying got NO_VALUE instead of expected input.</li>
+   <li>FIxes a bug where neo4j-admin report on standalone would fail due to missing cluster data</li>
+   <li>Update jetty to address security vulnerability CVE-2020-27218</li>
+   <li>Add :server disconnect link to the browser sidebar</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

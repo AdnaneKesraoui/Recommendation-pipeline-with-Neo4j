@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 1 March 2021</h5>
+				
+									Neo4j 4.1.7 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>Remove DEBUG log messages: “Index not found for uniqueValueSelectivity No index was found”</li>
+   <li>Fix bug where using aggregation in a reduce expression could lead to the wrong result.</li>
+   <li>Fixed bug which caused instances to fail to restart after a database had been dropped with the DUMP DATA option.</li>
+   <li>Upgrade to Apache Shiro 1.7.1</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

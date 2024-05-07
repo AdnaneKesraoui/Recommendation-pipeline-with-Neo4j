@@ -1,0 +1,44 @@
+
+			
+									<h5>Release Date: 21 December 2023</h5>
+				
+									Neo4j 4.4.29 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Prevent background sampling of large indexes from blocking shutdown.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Solve <a href="https://github.com/neo4j/neo4j/issues/13113">https://github.com/neo4j/neo4j/issues/13113</a> by allowing convertible types in reduce. E.g. RETURN reduce(a=[1], b in “a” | a+b) will return [1, “a”] instead of failing with a type error.</li>
+<li>Fix bug in type checking where the resulting type of a list concatenation could vary depending on which list was to the left and right, respectively, as reported in <a href="https://github.com/neo4j/neo4j/issues/13093">https://github.com/neo4j/neo4j/issues/13093</a></li>
+<li>Update Apache Shiro to 1.13.0</li>
+</ul>
+
+<h3>Security</h3>
+<ul>
+<li>Backup privileges from the PUBLIC role (and users) if they are related to the database being backed up.</li>
+</ul>
+
+<h3>Browser</h3>
+<ul>
+<li>Add setting to specify read transactions on cypher queries.</li>
+<li>Ensure right protocol is used for http reachability check.</li>
+<li>Fix element-id showing incorrectly in table.</li>
+<li>Respect <code>visible</code> field in SSO provider configuration.</li>
+<li>Only show non-composite aliases in database dropdown</li>
+<li>Update outdated documentation links</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Throws a type mismatch error in semantic checking instead of at runtime when Map Projections are done on types that are not: MAP, NODE or RELATIONSHIP, fixing the issue: <a href="https://github.com/neo4j/neo4j/issues/12997">https://github.com/neo4j/neo4j/issues/12997</a></li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

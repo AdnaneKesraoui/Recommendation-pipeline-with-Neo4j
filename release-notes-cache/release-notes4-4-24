@@ -1,0 +1,27 @@
+
+			
+									<h5>Release Date: 3 August 2023</h5>
+				
+									Neo4j 4.4.24 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Upgraded Bouncy Castle to v1.75 to mitigate CVE-2023-33201</li>
+</ul>
+
+<h3>Clustering</h3>
+<ul>
+<li>Fix performRecoveryWithLogPruning to always use LogProvider</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Update netty to 4.1.94-Final to address CVE-2023-34462</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

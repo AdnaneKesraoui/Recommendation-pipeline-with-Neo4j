@@ -1,0 +1,36 @@
+
+			
+									<h5>Release Date: 6 September 2022</h5>
+				
+									Neo4j 4.4.11 is a maintenance release with many important improvements and fixes.
+<h3>Kernel</h3>
+<ul>
+ 	<li>Greatly improves worst-case performance of scanning for deleted IDs to be reused for new records</li>
+ 	<li>Fix possible integer overflow during consistency check</li>
+ 	<li>Fixing an issue where ‘CALL { … } IN TRANSACTIONS’ could leak inner transactions when the outer transaction was terminated during execution, e.g by timeout</li>
+ 	<li>Jvm additional setting should not split inside quoted values</li>
+</ul>
+<h3><a id="user-content-cypher" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog#cypher" aria-hidden="true"></a>Cypher</h3>
+<ul>
+ 	<li>A primary alias was not created for fabric databases when they were created during startup. This led to the fabric database disappearing in some circumstances.</li>
+ 	<li>Fix bug with undirected relationship scans and self-loops</li>
+ 	<li>Deprecation of CASE expressions matching on null values</li>
+ 	<li>Fix error message when using DISTINCT in a function that does not accept DISTINCT&nbsp;<a href="https://github.com/neo4j/neo4j/issues/12910">https://github.com/neo4j/neo4j/issues/12910</a></li>
+ 	<li>When debug logging is enabled, LdapRealm can attempt to directly logNeo4jPrincipal objects resulting in logging like&nbsp;<code>org.neo4j.server.security.auth.Neo4jPrincipal@f1d6260f</code>. Fix it to log the username as expected.</li>
+ 	<li>fix issue where ExpandInto could return the wrong result</li>
+ 	<li>code review and more accurate documentation of the Traversal API</li>
+ 	<li>Disconnect driver session on exit in Cypher Shell.</li>
+</ul>
+<h3><a id="user-content-security" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog#security" aria-hidden="true"></a>Security</h3>
+<ul>
+ 	<li>Upgraded jetty to v9.4.48 in order to mitigate CVE-2022-2047 and CVE-2022-2048</li>
+</ul>
+<h3><a id="user-content-causal-clustering" class="anchor" href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog#causal-clustering" aria-hidden="true"></a>Causal Clustering</h3>
+<ul>
+ 	<li>Updated descriptions of settings&nbsp;<code>dbms.routing.enabled</code>&nbsp;and&nbsp;<code>dbms.routing.default_router</code></li>
+</ul>
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">4.4 Changelog</a>
+<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>				
+					

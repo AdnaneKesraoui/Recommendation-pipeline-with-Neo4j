@@ -1,0 +1,24 @@
+
+			
+									<h5>Release Date: 20 April 2022</h5>
+				
+									Neo4j 4.3.12 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update jackson-databind from 2.12.6 to 2.13.2.2 (and thus also com.fasterxml.jackson.* from 2.12.6 to 2.13.2), to address CVE-2020-36518</li>
+   <li>neo4j-admin import respects dbms.logs.debug.format setting</li>
+   <li>Fix bug where you could get an error message like Cannot put key x before first key y, for example in queries using SelectOrSemiApply or ConditionalApply and Limit.</li>
+   <li>Usages of GetDegree wasn’t obvious in the plan description. Now instead
+
+of size([pattern]) usages of GetDegree will be rendered with getDegree([pattern])</li>
+   <li>Before this change, pattern expressions in boolean contexts were marked as deprecated. This deprecation was removed.</li>
+
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.3 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.3/">here</a>.				
+					

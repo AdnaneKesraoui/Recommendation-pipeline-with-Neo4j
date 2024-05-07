@@ -1,0 +1,32 @@
+
+			
+									<h5>Release Date: 24 August 2023</h5>
+				
+									Neo4j 4.4.25 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Better handle transaction log corruption where header is missing.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Fix bug in fused pipelined runtime that could lead to lost updates if a property was cached. For example when running queries like <code>MATCH (n) WITH n.prop AS oldValue SET n.prop = n.prop + 1 WITH n.prop AS newValue RETURN *</code> concurrently. Note, Cypher will not always prevent lost updates, <a href="https://neo4j.com/docs/java-reference/current/transaction-management/#transactions-isolation-lostupdates">see documentation</a> for more details.</li>
+<li>Fixes two bugs around durations with fractional components. Negation was not properly propagated to the components, so that “-P0.5Y” was presented as 6 months rather than -6 months. Fractional minutes &gt; 60 was not properly converted into hours, so that 1 h 72.5 min was presented as 1h 12 min 30s instead of 2h 12 min 30s.
+Update Apache Shiro to 1.12.0</li>
+<li>Fixes neo4j/neo4j#13155, neo4j/neo4j#13189 and neo4j/neo4j#13191 where shadowing variables in SKIP and LIMIT caused unexpected errors.</li>
+</ul>
+
+<h3>Browser</h3>
+<ul>
+<li>SSO papercuts (more logs &amp; make downloading them easier)</li>
+<li>Fix bug where :auto hint would not show</li>
+<li>Fix bug where metadata was incorrectly formatted</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

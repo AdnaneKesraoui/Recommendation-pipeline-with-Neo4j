@@ -1,0 +1,23 @@
+
+			
+									<h5>Release Date: 31 August 2020</h5>
+				
+									Neo4j 4.0.8 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Don’t fail SslPolicy creation if there are dotfiles present in the certificate directories</li>
+   <li>Prevent excess memory usage in OrLeafPlanner with many ORs</li> 
+   <li>Fix bug when combining * and a map projection in the same projection, e.g. WITH , s {.}…</li>
+   <li>Fixed a bug where using node:Label check on a node returned from a procedure would result in a planner error.</li>
+   <li>4.0 planner cardinality fix for OPTIONAL MATCH under APPLY</li>
+   <li>Retain solved hints from the right-hand side of a union.</li>
+   <li>Update Apache Shiro to 1.5.3</li>
+
+
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

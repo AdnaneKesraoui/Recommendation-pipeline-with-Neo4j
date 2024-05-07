@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 14 July 2020</h5>
+				
+									Neo4j 4.1.1 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes issue where created indexes would stop being resampled after restart</li>
+   <li>Fix a bug where deleting a relationship would not remove its entry from any relevant full-text index on relationships such relationships.</li>
+   <li>Fix a bug where queries with Aggregations and RETURN * could hang forever during planning.</li>
+   <li>Fix so browser doesn’t execute meta query on system db</li>
+   <li>Fix displaying large integers in new table correctly</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.1-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.1 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.1/">here</a>.				
+					

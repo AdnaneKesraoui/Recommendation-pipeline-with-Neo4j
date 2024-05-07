@@ -1,0 +1,45 @@
+
+			
+									<h5>Release Date: 2 February 2023</h5>
+				
+									Neo4j 4.4.17 is a maintenance release with many important improvements and fixes.
+
+
+<h3>Kernel</h3>
+<ul>
+<li>Fix reporting of JVM memory metrics</li>
+</ul>
+<h3>Cypher</h3>
+<ul>
+<li>Adds eagerness when returning a full entity node if a node or relationships property or label has been updated.</li>
+<li>fix bug for list literals with in expressions</li>
+<li>Fix a bug where SKIP and LIMIT was ignored for simple COUNT(…) aggregation queries that was solved with a CountFromCountStore plan.</li>
+<li>Fixed a bug where an OPTIONAL MATCH with shortestPath, followed by DISTINCT, would fail during planning.</li>
+<li>Fix performance regression of IN expressions.</li>
+<li>Upgraded Apache Shiro from 1.10.0 to 1.11.0. This version includes fixes for CVE-2023-22602</li>
+F<li>ix a bug where group to role mappings defined for OpenID connect in dbms.security.oidc.<provider>.authorization.group_to_role_mapping were not matched correctly with claims containing capital letters.</provider></li>
+<li>Fix bug in MERGE ()-[:R]-()</li>
+</ul>
+<h3>Browser</h3>
+<ul>
+<li>Update driver</li>
+<li>Fix bug where email was not supported as a username in :server user list</li>
+<li>Fix performance issue with browser background metadata for rbac users</li>
+<li>Handle connections to composite databases</li>
+<li>Fix indent formatting in nested objects</li>
+<li>Fix relationship stylings not getting applied</li>
+<li>show alias name in database selector</li>
+<li>Clear metadata on switching database</li>
+<li>Add neo4j trial banners</li>
+<li>Allow setting parameters on composite databases</li>
+<li>Bugfix: role cluster role incorrectly reported as leader</li>
+<li>Ensure lost connection doesn’t break browser</li>
+<li>Bugfix – :auto didn’t handle newlines</li>
+<li>Update driver to 5.3.0</li>
+</ul>
+
+<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

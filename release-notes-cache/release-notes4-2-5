@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 9 April 2021</h5>
+				
+									Neo4j 4.2.5 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update Netty to 4.1.60</li>
+   <li>Exclude Netty 3</li>
+   <li>Update jetty to 9.4.39.v20210325 to address vulnerability CVE-2021-28165</li>
+   <li>Correctly respects log level NONE (e.g at dbms.logs.debug.level)</li>
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.2-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.2 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.2/">here</a>.				
+					

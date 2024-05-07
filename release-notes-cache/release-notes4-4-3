@@ -1,0 +1,25 @@
+
+			
+									<h5>Release Date: 11 January 2022</h5>
+				
+									Neo4j 4.4.3 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Update Log4j to 2.17 to address CVE-2021-45105</li>
+   <li>Update Log4j to 2.17.1 to address CVE-2021-44832</li>
+   <li>Fixes an issue in importer where large node IDs from CSV source that were additionally stored as node property may sometimes end up with the wrong value.</li>
+   <li>Fixes an issue where trailing spaces on dbms.jvm.additional configurations could cause neo4j not to s</li>
+   <li>Close kernel transaction on periodic transaction context commit</li>
+   <li>Fix Expected positive int value, got 0 error with CALL … IN TRANSACTIONS
+when there were an empty map in scope.</li>
+   <li>Fix a bug where, in rare cases, reusing a variable that had previously been used as a path variable would fail during planning.</li>
+
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.4 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.4/">here</a>.				
+					

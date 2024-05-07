@@ -1,0 +1,75 @@
+
+			
+									<h5>Release Date: 17 June 2021</h5>
+				
+									We are proud to announce the general availability of our Neo4j Database – Neo4j 4.3 Enterprise Edition.
+
+Neo4j 4.3 is the core technology of the <a href="https://neo4j.com/product/?ref=release-notes">Neo4j Graph Platform</a>.
+
+<h3>Important Information</h3>
+This release is generally available and ready for production.
+
+<h3>Highlights</h3>
+
+<h4>Operability</h4>
+<ul>
+        <li><b>Improved server-side routing functionality</b> – server-side routing has been extended to cover more use cases. Clients connect to a cluster DBMS and automatically execute or redirect queries depending on the type of transaction (read-only vs read-write) and on the type of instance (leader vs follower or read replica). Transaction redirection can be orchestrated by the client (client-side routing) or by the server (server-side routing). More information is available <a href="https://neo4j.com/docs/operations-manual/4.3/clustering/internals/#causal-clustering-routing">here</a>.</li>
+ 	<li><b>New dynamic settings</b> – dbms.lock.acquisition.timeout, dbms.transaction.bookmark_ready_timeout, dbms.security.ldap.authentication.attribute, dbms.security.ldap.authorization.user_search_filter, dbms.security.ldap.authorization.user_search_base, dbms.security.ldap.authentication.user_dn_template and dbms.security.ldap.authorization.group_membership_attributes are now dynamic.</li>
+ 	<li><b>Change of permissions for the expand command option</b> – the neo4j.conf file can be used with the expand command option with a more relaxed permission (Owner:RW and Group:R in Linux and MacOS).</li>
+ 	<li><b>Instance unique identification in causal cluster</b> – member of a cluster have a unique identification. In previous versions, the member were identified by their URI.</li>
+ 	<li><b>Archive of the cluster state with neo4j-admin unbind</b> – when an instance is removed from a cluster using the neo4j-admin unbind utility, an operator can save its cluster state for port-mortem analysis and problem resolution.</li>
+ 	<li><b>CREATE DATABASE with a seed store</b> – a database in a clustered DBMS can be created from a seed restored in one of the members. More information is available <a href="https://neo4j.com/docs/operations-manual/4.3/clustering/seed/#causal-clustering-seed-all-from-backups">here</a>.</li>
+ 	<li><b>Renaming users and roles</b> – administrators can rename users and roles without the need to recreate them. More information is available <a href="https://neo4j.com/docs/cypher-manual/4.3/administration/security/users-and-roles/#administration-security-users-rename">here</a>.</li>
+	<li><b>SHOW FUNCTIONS and SHOW PROCEDURES commands</b> – administrators can review the functions and the procedures available on a DBMS using the new SHOW commands, controlled by role-based access control security.</li>
+	<li><b>CREATE and DROP FULLTEXT INDEX commands</b> – administrators can create and drop full-text indexes using the CREATE INDEX and the DROP INDEX commands.</li>
+	<li><b>Logging improvements</b> – new settings allow administrators to customize query, security and general logs. Logs have now structured (JSON) and unstructured formats, parameters can be limited in length and obfuscated when needed. Query plans and transaction IDs can be added to the query log in order to improve query analysis. More information is available <a href="https://neo4j.com/docs/operations-manual/4.3/monitoring/logging/">here</a>.</li>
+	<li><b>Backup/Restore enhancements</b> – Neo4j 4.3 provides more functionality in terms of incremental backups, deferred and parallel recovery operations. More information is available <a href="https://neo4j.com/docs/operations-manual/4.3/backup-restore/online-backup/">here</a>.</li>
+	<li><b>License directory</b> – Neo4j 4.3 offers a new standard directory under the Neo4j home directory to store license files. The default setting in the neo4j.conf file is ${NEO4J_HOME}/licenses.</li>
+</ul>
+
+<h4>Scalability &amp; Federation</h4>
+<ul>
+ 	<li><b>Relationship chain lock for create/delete dense nodes</b> – Neo4j 4.3 has an improved locking mechanism for writing relationships (insert/update/delete). There is a new concept of relationship chain so that relationships are no longer directly connected to the start and end nodes in the relationships store.</li>
+ 	<li><b>Read replica-only clusters</b> – Neo4j 4.3 extends the capabilities of clustering to the use of one or more Read Replica instances used in read-only mode, replicating data from a single instance used in read-write mode.</li>
+</ul>
+
+<h4>Performance</h4>
+<ul>
+ 	<li><b>Node label and relationship type indexes</b> – in Neo4j 4.3 a new index for relationship types has been added, similar to the existing index for node labels. Node label and relationship type indexes are now created and maintained as any other index by using INDEX commands. In practical terms, these indexes can now be dropped if they are not needed and they do not block startup if they must be rebuilt. Also, they are visible with the SHOW INDEX command. More information is available <a href="https://neo4j.com/docs/cypher-manual/4.3/administration/indexes-for-search-performance/#administration-indexes-introduction">here</a>.</li>
+ 	<li><b>Relationship type/property Indexes</b> – similar to indexes for properties associated to nodes, Neo4j 4.3 provides native index capabilities for properties associated to relationships. More information is available <a href="https://neo4j.com/docs/cypher-manual/4.3/administration/indexes-for-search-performance/#administration-indexes-create-a-single-property-index-for-relationships">here</a>.</li>
+ 	<li><b>Cypher Planner improvements</b> – improvements have been added for ORDER BY and LIMIT.</li>
+ 	<li><b>isEmpty built-in function</b> – Neo4j 4.3 provides the isEmpty() function as an idiomatic way to test the emptiness of some object with a given data type. More information is available <a href="https://neo4j.com/docs/cypher-manual/4.3/functions/predicate/#functions-isempty">here</a>.</li>
+</ul>
+
+<h4>Development/Language</h4>
+<ul>
+ 	<li><b>exists() and IS NOT NULL functionality</b> – IS NOT NULL is the preferred way to assert that an object is null or not null. exists() can be confused with a function and it has been deprecated.</li>
+ 	<li><b>Conversion functions</b> – Neo4j 4.3 incorporates new functions to convert numbers, strings and booleans. toIntegerOrNull(), toFloatOrNull(),
+toBooleanOrNull(), toStringOrNull(), toIntegerList(), toFloatList(), toBooleanList() are toStringList() added to the existing conversion functions available in previous versions.</li>
+</ul>
+
+<h4>Security</h4>
+<ul>
+ 	<li><b>Per user Home database</b> – Similar to a home directory for a Linux user, a home database is the database for a particular user when it connects to Neo4j. More information is available <a href="https://neo4j.com/docs/cypher-manual/4.3/administration/security/users-and-roles/#administration-security-users-create">here</a>.</li>
+ 	<li><b>LDAP: guard against inadvertent authorization</b> – dbms.security.ldap.authorization.access_permitted_group restricts LDAP authorization to a particular group. dbms.security.ldap.authentication.attribute and dbms.security.ldap.authentication.search_for_attribute have been added to allow a custom attribute to be used for looking up LDAP users.</li>
+</ul>
+
+<h3>Deprecations</h3>
+The list of deprecations for the Cypher language is available <a href="https://neo4j.com/docs/cypher-manual/4.3/deprecations-additions-removals-compatibility/#cypher-deprecations-additions-removals-4.3">here</a>.
+
+The documentation is available here:
+<ul>
+ 	<li><a href="https://neo4j.com/docs/operations-manual/4.3/">Operations Manual</a></li>
+ 	<li><a href="https://neo4j.com/docs/cypher-manual/4.3/">Cypher Manual</a></li>
+</ul>
+
+<h3>Available Packages</h3>
+Packages are available in the <a href="https://neo4j.com/download-center">Download center</a>.<br>
+Neo4j 4.3 is also available in Docker and in the usual Linux repositories (Debian and Yum).
+
+<h3>Upgrading to Neo4j 4.3 Enterprise Edition</h3>
+In order to migrate from Neo4j 3.5 to Neo4j 4.0, 4.1, 4.2, or 4.3 follow the migration guide available <a href="https://neo4j.com/docs/migration-guide/">here</a>.
+The process to upgrade from Neo4j 4.0, 4.1 or 4.2 to Neo4j 4.3 is described <a href="https://neo4j.com/docs/operations-manual/upgrade/">here</a>.<br>
+Clustering installations can be upgraded without downtime following <a href="https://neo4j.com/docs/operations-manual/current/upgrade/causal-cluster/">these instructions</a>.
+<hr>				
+					

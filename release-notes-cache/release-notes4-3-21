@@ -1,0 +1,13 @@
+
+			
+									<h5>Release Date: 10 November 2022</h5>
+				
+									Neo4j 4.3.21 is a maintenance release with many important improvements and fixes.
+<h3>Apoc</h3>
+Updates Apoc dependencies so that transitive dependency to commons-text does not get flagged as problematic for <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42889">CVE-2022-42889</a>. Fix bug in csv loader allowing quoted delimiters
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">4.3 Changelog</a><br>
+<a href="https://neo4j.com/docs/operations-manual/4.3/">4.3 Operations manual</a>
+
+&nbsp;				
+					

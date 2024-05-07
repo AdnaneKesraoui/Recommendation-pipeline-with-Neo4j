@@ -1,0 +1,37 @@
+
+			
+									<h5>Release Date: 28 March 2023</h5>
+				
+									Neo4j 4.4.19 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Fixes an issue where recovery would temporarily hold onto more memory than necessary, making it more likely for recovery to run out of heap on recovering very large transactions.</li>
+<li>Improve error message for unsupported java versions</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>The JWT claim specified in dbms.security.oidc.<provider>.claims.groups may now also contain a single group returned as a string as well as a list of groups as was previously required.</provider></li>
+<li>Fixes bug with error message “Unexpected error: out of bounds for object ” when having ORDER BY with a literal in certain cases.</li>
+<li>Fixed a bug where a query containing predicate without dependencies on any pattern variables would fail at runtime.</li>
+<li>Fix bug for MERGE queries in pipelined runtime.</li>
+<li>Fix memory consumption issue of longer running queries in slotted and interpreted runtime.</li>
+</ul>
+
+<h3>Security</h3>
+<ul>
+<li>Fixed a bug where dropping a remote alias would not clean up access privileges on it correctly, resulting in any user with a role having that privilege failing to authorize.</li>
+</ul>
+
+<h3>Docker</h3>
+<ul>
+<li>JVM additional configuration set by environment variable will now stop overriding default jvm configurations.</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

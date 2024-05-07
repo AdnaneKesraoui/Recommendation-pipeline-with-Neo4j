@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 21 April 2022</h5>
+				
+									Neo4j 3.5.32 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+  <li>Update jackson-databind from 2.10.5.1 to 2.13.2.2 (and thus also com.fasterxml.jackson.* from 2.10.5 to 2.13.2), to address CVE-2020-36518</li>
+  <li>Fixed a bug where matching on the same variable multiple times would trigger an exception during planning or produce incorrect results.</li>
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-3.5-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 3.5 Operations manual <a href="https://neo4j.com/docs/operations-manual/3.5/">here</a>.
+<h3>Upgrading</h3>
+When upgrading to Neo4j 3.5 for the first time, be sure to read the current upgrade instructions in the <a href="https://neo4j.com/docs/operations-manual/3.5/upgrade/" target="_blank" rel="noopener noreferrer">Neo4j Operations Manual</a>, as there are additional steps and considerations.				
+					

@@ -1,0 +1,22 @@
+
+			
+									<h5>Release Date: 6 July 2021</h5>
+				
+									Neo4j 4.0.12 is a maintenance release with many important improvements and fixes.  Neo4j 4.0 has reached <a href="https://neo4j.com/developer/kb/neo4j-supported-versions/">End of Life</a>.
+
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fix issue with relationship belonging to dense nodes in the high-limit format that could cause corruptions. This affects relationship types with ids larger than 65535.</li>
+   <li>Fix bug where neo4j-admin copy would fail when upgrading from 3.5 store if fulltext indexes where present</li>
+   <li>Fixed a bug where an index scan would be used to solve an OPTIONAL MATCH incorrectly.</li>
+   <li>Don’t overflow on –9223372036854775808. Github issue: neo4j/neo4j#12726</li>
+   <li>Upgrade to Apache Shiro 1.7.1</li>
+   <li>Update jersey to 2.34 to address CVE-2021-28168</li>
+   <li>Update Netty to 4.1.60</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

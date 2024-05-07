@@ -1,0 +1,33 @@
+
+			
+									<h5>Release Date: 24 May 2023</h5>
+				
+									Neo4j 4.4.21 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Fix issue where consistency check could take a very long time during index check if the store had very large string or array properties. This was due to internal caches growing a lot and subsequently taking a very long time to clear.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Reduce memory footprint of cached queries with lots of expressions.</li>
+<li>Fixes bug where updates would not always get applied before a LIMIT 0 or a WHERE false.</li>
+</ul>
+
+<h3>Packaging</h3>
+<ul>
+<li>Fixed java dependencies to use <code>java-11</code> metapackage provided by both openjdk and oracle java.</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Update jetty to <code>9.4.51.v20230217</code> for <code>CVE-2023-26048</code></li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

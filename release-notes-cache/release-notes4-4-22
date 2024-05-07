@@ -1,0 +1,43 @@
+
+			
+									<h5>Release Date: 27 June 2023</h5>
+				
+									Neo4j 4.4.22 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Upgraded jackson to 2.15.2 to mitigate sonatype-2022-6438</li>
+<li>Reduced overheads when running on operation systems with 64K memory page sizes.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Fixed a bug where predicates with uppercase <code>NODES()</code> and <code>RELATIONSHIPS()</code> functions would be planned as a <code>Filter</code> after <code>VarExpand/ShortestPath</code> instead of being applied directly during path search.</li>
+</ul>
+
+<h3>Browser</h3>
+<ul>
+<li>Gracefully handle when some databases are unavailable</li>
+<li>Faster bootup &amp; better connection handling</li>
+<li>Improve sysinfo frame consistency</li>
+<li>Debug connectivity touch ups</li>
+<li>Prevent briefly storing credentials before reading setting</li>
+</ul>
+
+<h3>Docker</h3>
+<ul>
+<li>Added new docker image based on redhat/ubi8-minimal</li>
+<li>Added neo4j-admin report functionality to 5.x and 4.4 images.</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Fix error when returning discovery information on bolt endpoint.</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

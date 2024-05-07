@@ -1,0 +1,54 @@
+
+			
+									<h5>Release Date: 13 June 2022</h5>
+				
+									Neo4j 4.4.8 is a maintenance release with many important improvements and fixes.
+
+
+	<h3 class="western"><a name="user-content-kernel"></a>Kernel</h3>
+				<ul>
+					<li><p>Fixes a bug in import to <code>high_limit</code> format
+					where an interrupted import could fail on being resumed with
+					<code>Illegal secondary record reference</code> 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-cypher"></a>Cypher</h3>
+				<ul>
+					<li><p>Aliases for Remote Database</p>
+					</li><li><p>Fix potential <code>Expected as string value 'substring',
+					but got NO_VALUE'</code></p>
+					<p>error when the output of <code>reduce</code> is used as input
+					to another function.</p>
+					</li><li><p>Github issue: neo4j/neo4j#12887, fix an issue with <code>ltrim</code>,
+					<code>rtrim</code>, and <code>trim</code>.</p>
+					</li><li><p>Fixes authorization bug when connecting to a local
+					database alias using the drivers when fabric is enabled</p>
+					</li><li><p>Fixed <code>Comparison method violates its general
+					contract</code> error during planning.</p>
+					</li><li><p>FOREACH should coerce single item to a list at runtime</p>
+					</li><li><p>Fixed rare bug where self reference in equality (´WHERE
+					n:L AND n.p = (n.p = n.p)´) caused stackoverflow error.</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-causal-clustering"></a>Causal
+				Clustering</h3>
+				<ul>
+					<li><p>Fix bug where prefetching log entries could get stuck,
+					unable to read new entries from the log. 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-browser"></a>Browser</h3>
+				<ul>
+					<li><p>Fix bug causing autocomplete to no longer work 
+					</p>
+				</li></ul>
+				<h3 class="western"><a name="user-content-misc"></a>Misc</h3>
+				<ul>
+					<li><p>Fixed security issue with the HTTP Transactional API. 
+					</p>
+				</li></ul>
+
+
+<h3>Changelog and Documentation</h3>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">4.4 Changelog</a>.<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>.				
+					

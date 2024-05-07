@@ -1,0 +1,32 @@
+
+			
+									<h5>Release Date: 25 January 2024</h5>
+				
+									Neo4j 4.4.30 is a maintenance release with many important improvements and fixes.
+
+<h3>Cypher</h3>
+<ul>
+<li>Fix an issue in pipelined runtime that could cause a query to perform unnecessary work if planned with a PruningVarExpand operator followed by a Limit.</li>
+<li>Improve the transaction termination response time of queries with long running expansions of variable-length path patterns with distinct end-nodes.</li>
+<li>Wrap internal parser errors in SyntaxException and improve EOF error message<br>
+This way, the errors will have the Neo4j status Neo.ClientError.Statement.SyntaxError instead of Neo.Database.General.UnknownError, meaning they will stop polluting the debug log.</li>
+</ul>
+
+<h3>Clustering</h3>
+<ul>
+<li>Fix an issue in store copy that could cause store inconsistencies in rare cases. In these cases the transaction range after a store copy was calculated too small, leading to misaligned store files after recovery. With this change the range should be safely calculated.</li>
+</ul>
+
+<h3>Bundled Packages:</h3>
+Cypher-Shell 4.4.30<br>
+labs/apoc-4.4.0.24-core<br>
+products/bloom-plugin-4.x-2.11.0<br>
+products/neo4j-graph-data-science-2.5.7<br>
+products/neo4j-ops-manager-agent-1.9.0<br>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a><br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

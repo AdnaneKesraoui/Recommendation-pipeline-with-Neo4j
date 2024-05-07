@@ -1,0 +1,28 @@
+
+			
+									<h5>Release Date: 25 November 2022</h5>
+				
+									Neo4j 4.3.22 is a maintenance release with many important improvements and fixes.
+<h3>Cypher</h3>
+
+<ul>
+ 	<li>Fixed a bug where an updating query might get stuck in an infinite loop during planning.</li>
+</ul>
+
+
+<h3>Clustering</h3>
+
+<ul>
+ 	<li>Upgrade jackson to 2.13.4 and jackson-databind to 2.13.4.2 to address vulnerabilities GHSA-jjjh-jjxp-wpff and GHSA-rgv9-q543-rqg4</li>
+</ul>
+
+
+<h3>Misc</h3>
+<ul>
+ 	<li>Fix bug with map projection in Fabric, where the value of the map projection is returned outside a subquery. Fixes github issue <a href="https://github.com/neo4j/neo4j/issues/12939" target="_blank" rel="noopener noreferrer">https://github.com/neo4j/neo4j/issues/12939</a></li>
+</ul>
+<br>
+<a href="https://neo4j.com/docs/operations-manual/4.3/">4.3 Operations manual</a>
+
+&nbsp;				
+					

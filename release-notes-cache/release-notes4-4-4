@@ -1,0 +1,20 @@
+
+			
+									<h5>Release Date: 9 February 2022</h5>
+				
+									Neo4j 4.4.4 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Improved performance of queries containing UNWIND and CALL IN TRANSACTIONS</li>
+   <li>Update netty to 4.1.73.Final to address CVE-2021-43797. Whilst the affected code is not used, this will prevent it from incorrectly flagging it in security scanning tools.</li>
+   <li>Fix a memory leak of the runtime transactional context into the query plan cache</li>
+   <li>Fix an issue where ExpandInto can call get degrees on a dense node when DENY privileges are present. This causes a large amount of unnecessary permissions checks to occur.</li>
+    <li>Introduce access-mode header for Transactional HTTP API.</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.4 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.4/">here</a>.				
+					

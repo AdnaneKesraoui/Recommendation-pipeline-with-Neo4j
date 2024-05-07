@@ -1,0 +1,83 @@
+
+			
+									<h5>Release Date: 2 December 2021</h5>
+				
+									We are proud to announce the general availability of our Neo4j Database – Neo4j 4.4 Enterprise Edition.
+
+Neo4j 4.4 is the core technology of the <a href="https://neo4j.com/product/?ref=release-notes">Neo4j Graph Platform</a>.
+
+<h3>Important Information</h3>
+This is a <a href="https://neo4j.com/developer/neo4j-database/#_support_plans">Long Term Support</a> release. Neo4j will provide patches and bug fixes for a minimum period of 36 months after the release date.<br>
+This release is generally available and ready for production.
+
+<h3>Highlights</h3>
+
+<h4>Developers and Data Scientists</h4>
+<ul>
+ 	<li><b>Cypher Shell Enhancements</b> – new enhancements:<br>
+        –change-password allows you to change your own password without initiating an interactive session.<br>
+        :history improved, with one recall per command and other improvements<br>
+        :connect :disconnect from inside the cypher shell, without exiting and re-entering it.</li>
+ 	<li><b>HTTP API</b> – A refreshed HTTP API for low overhead, dependency-free communications with Neo4j server with a familiar, cloud-native interface.
+This release utilises server-side routing (for single request transactions) to remove the need to handle routing tables or use middleware to accomplish the same when connecting to clusters.</li>
+ 	<li><b>User impersonation</b> – This feature allows specially privileged users to act as another user without knowledge nor access to the impersonated user’s credentials. The Impersonator assumes the roles (and therefore all the permissions) of another user.</li>
+ 	<li><b>Drivers Keepalive (connection liveness)</b> – Connection hints can be provided on the driver APIs to initiate server/client behaviours to guard against connections being discontinued due to perceived inactivity. These behaviours include NOOP messages and returning records from the buffer, and can be configured for the time intervals required.</li>
+ 	<li><b>TestKit with Community Authors</b> – Community driver authors are supported by having access to the same validating tests that the official language drivers have to pass.</li>
+</ul>
+
+<h4>Language and Graphs</h4>
+<ul>
+ 	<li><b>Node pattern improvements</b> – There is a new syntactic alternative for Cypher node patterns. The new syntax can be used in MATCH and inside pattern comprehension.</li>
+ 	<li><b>RANGE and POINT indexes</b> – RANGE Indexes evaluate Cypher predicates with =, &gt;, &lt;, &gt;=, &lt;= (and !=) comparison operators on booleans, integers, floats, strings, and temporals, and STARTS WITH on strings. POINT Indexes support multidimensional range predicate and distance predicates.<br>
+            <b>IMPORTANT</b>: RANGE and POINT indexes are not selected by the Cypher planner, therefore they are helpful exclusively for a smooth migration to Neo4j 5.</li>
+ 	<li><b>TEXT indexes</b> – TEXT indexes replace B-tree indexes for string queries.</li>
+</ul>
+
+<h4>Performance</h4>
+<ul>
+        <li><b>New index hints</b> – Users can force the planner to choose between a BTREE or a TEXT index when they are available. The feature is also available for relationship type and for relationship type/property indexes.</li>
+        <li><b>CALL {…} TRANSACTIONS clause</b> – A new clause allows user to start one or more transactions from within a transaction. For example, we can have a transaction that is used scan a significant amount of data in a graph, every X objects returned, we want to start another transaction executing more operations on those objects, while the original transaction can carry on with the scanning.</li>
+        <li><b>SEARCH index improvements</b> – Improved performance for SEARCH indexes when LIMIT is specified in the search procedure.</li>
+</ul>
+
+<h4>Aura and Cloud</h4>
+<ul>
+        <li><b>Cloud images for analytic workloads</b> – New public images designed for analytics include Neo4j Bloom and GDS Library plugin, and the experimental APOC procedures.</li>
+</ul>
+
+<h4>Operability</h4>
+<ul>
+        <li><b>dbms.info() information in debug.log</b> – the debug log file contains the output of the dbms.info() procedure call.</li>
+        <li><b>SHOW TRANSACTIONS and TERMINATE TRANSACTION admin commands</b> – Two new commands, one to check the status of the running transactions (SHOW TRANSACTIONS) and one to terminate a running transaction (TERMINATE TRANSACTION) have been introduced.</li>
+        <li><b>SHOW DATABASES improvements</b> – The SHOW DATABASE command has new columns in its verbose (YIELD *) form.</li>
+        <li><b>READ ONLY databases</b> – The ALTER DATABASE command can be used to set the access to READ ONLY or READ WRITE.</li>
+        <li><b>Database aliases</b> – Databases can be used with aliases. An alias has less restrictions in terms of naming convention, compared to the original name of a database.</li>
+        <li><b>Neo4j Bloom and GDS library in the package</b> – The package provided for <a href="https://neo4j.com/product/bloom">Neo4j 4.4 Enterprise Edition contains Neo4j Bloom</a> and the <a href="https://neo4j.com/product/graph-data-science">Graph Data Science Library</a>. The package contains the most up-to-date version of those components who have been tested to work with the given version of the database.</li>
+</ul>
+
+<h4>Security</h4>
+<ul>
+ 	<li><b>Single Sign-On</b> – Security integrations with customers’ identity providers, managed in-product through configuration, and built into Browser and Bloom. OIDC over oAuth2 is supported initially. Customers can implement SSO workflows in their own applications and pass tokens through the official Neo4j language drivers.</li>
+</ul>
+
+<h3>Deprecations</h3>
+The list of deprecations for the Cypher language is available <a href="https://neo4j.com/docs/cypher-manual/4.4/deprecations-additions-removals-compatibility/#cypher-deprecations-additions-removals-4.4">here</a>.
+
+The documentation is available here:
+<ul>
+ 	<li><a href="https://neo4j.com/docs/operations-manual/4.4/">Operations Manual</a></li>
+ 	<li><a href="https://neo4j.com/docs/cypher-manual/4.4/">Cypher Manual</a></li>
+</ul>
+
+The changelog for this release is available <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">here</a>.
+
+<h3>Available Packages</h3>
+Packages are available in the <a href="https://neo4j.com/download-center">Download center</a>.<br>
+Neo4j 4.4 is also available in Docker and in the usual Linux repositories (Debian and Yum).
+
+<h3>Upgrading to Neo4j 4.4 Enterprise Edition</h3>
+In order to migrate from Neo4j 3.5 to Neo4j 4.0, 4.1, 4.2, 4.3 or 4.4 follow the migration guide available <a href="https://neo4j.com/docs/migration-guide/">here</a>.
+The process to upgrade from Neo4j 4.0, 4.1, 4.2 or 4.3 to Neo4j 4.4 is described <a href="https://neo4j.com/docs/operations-manual/upgrade/">here</a>.<br>
+Clustering installations can be upgraded without downtime following <a href="https://neo4j.com/docs/operations-manual/current/upgrade/causal-cluster/">these instructions</a>.
+<hr>				
+					

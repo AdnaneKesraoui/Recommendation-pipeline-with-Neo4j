@@ -1,0 +1,18 @@
+
+			
+									<h5>Release Date: 14 October 2021</h5>
+				
+									Neo4j 4.3.6 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes a bug in node index seek on a unique property in write queries. For example MATCH (n:Node) WHERE n.unique IN [‘does not exist’, ‘exists’] DELETE DETACH n would fail to delete nodes if there is a unique constraint on unique and at least one predicate does not match any nodes.</li>
+   <li>Fixes an issue where neo4j-admin passed arguments in @ that contained a large amount of arguments (e.g for import)</li>
+   <li>Don’t plan NodeHashJoin for argument variable</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.3 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.3/">here</a>.				
+					

@@ -1,0 +1,23 @@
+
+			
+									<h5>Release Date: 17 March 2020</h5>
+				
+									Neo4j 4.0.2 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>Fix bug where store upgrade could see IndexOutOfBoundsException when upgrading store that was much larger than available memory.</li>
+   <li>Add jvm argument,<br><br>
+<code> -Dorg.neo4j.kernel.impl.storemigration.RecordStorageMigrator.migration_threads=</code>, to set number of threads used to read and write when upgrading store. By setting a lower value the contention on disk can be reduced. Default value is the number of processors available to the process.</li>
+    <li>The cluster formation process changes the system database on the bootstrapper node and needs to remove the system database from the other nodes for consistency, but if the formation fails at the wrong time and is attempted again with another node being selected as the bootstrapper then that node will have saved the system database to a temporary location and restore it from there.</li>
+     <li>If the system database fails to bootstrap the DBMS will now perform an orderly shutdown, rather than hanging.</li>
+    <li>Fix bug where the wrong results could be returned in pipelined runtime whenever a filter came after a distinct.</li>
+    <li>Fixed bug in compiled expressions where a null path from an OPTIONAL MATCH inserted into nested functions lead to an unexpected error.</li>
+
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

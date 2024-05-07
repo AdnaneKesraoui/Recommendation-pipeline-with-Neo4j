@@ -1,0 +1,23 @@
+
+			
+									<h5>Release Date: 25 November 2022</h5>
+				
+									Neo4j 4.4.15 is a maintenance release with many important improvements and fixes.
+<h3>Kernel</h3>
+<ul>
+ 	<li>Upgraded jettison to 1.5.1 to mitigate CVE-2022-40150 and CVE-2022-40149</li>
+</ul>
+<h3>Cypher</h3>
+<ul>
+ 	<li>We were not able to plan value hash joins when the properties are wrapped in a function call. This has been fixed now.</li>
+ 	<li>Previously, the planner did not assume an expression like <code>n.prop =~ ...</code> to filter the results more than just the bare existence of <code>n.prop</code>. This was changed, such that the planner would prefer to apply these predicates earlier during the query evaluation.</li>
+ 	<li>Fixed a bug where an updating query might get stuck in an infinite loop during planning.</li>
+ 	<li>Fix error <code>Exception closing multiple resources</code> that could happen for plans using Expand(Into), see Github issue: <a href="https://github.com/neo4j/neo4j/issues/12968" target="_blank" rel="noopener noreferrer">https://github.com/neo4j/neo4j/issues/12968</a></li>
+</ul>
+
+
+<br>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 22 September 2021</h5>
+				
+									Neo4j 4.3.4 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes an issue where neo4j-admin copy would not complete if there were “enough” deleted node records from the source database. The copy would hang in sorting the sourceDbNodeId –&gt; targetDbNodeId data structure.</li>
+   <li>Transform all hostname characters to lower case</li>
+   <li>Fixes a bug in consistency checker for composite node indexes with lucene+native-3.0 index provider. Consistency checker reported index inconsistencies for all entries in the index even though the values were correctly indexed</li>
+   <li>Fixed a bug where using length() in CYPHER 3.5 mode through Fabric would result in an error.</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.3-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.3 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.3/">here</a>.				
+					

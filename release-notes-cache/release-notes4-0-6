@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 16 June 2020</h5>
+				
+									Neo4j 4.0.6 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes issue where created indexes would stop being resampled after restart</li>
+   <li>Fix a bug where queries with Aggregations and RETURN * could hang forever during planning.</li>
+   <li>Fix regression due to resource tracking of resource managers</li>
+   <li>Fixed a NullPointerException that could occur if the setting cypher.query_max_allocations was not 0.</li>
+   <li>Browser:  Fix displaying large integers in new table correctly</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

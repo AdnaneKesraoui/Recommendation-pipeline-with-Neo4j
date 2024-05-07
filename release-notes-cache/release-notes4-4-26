@@ -1,0 +1,30 @@
+
+			
+									<h5>Release Date: 20 September 2023</h5>
+				
+									Neo4j 4.4.26 is a maintenance release with many important improvements and fixes.
+
+<h3>Cypher</h3>
+<ul>
+<li>Track memory of de-referenced nodes and relationships in <code>ProduceResult</code>. This fix will avoid some out of memory errors in queries that returns lots of nodes or relationships. For example in queries like <code>MATCH (n) RETURN collect(n)</code>. When returning entities, all their properties and labels will be populated in <code>ProduceResult</code> operator which can cause lots of memory allocations. Before this change we would not track this memory towards the transaction limits.</li>
+</ul>
+
+<h3>Clustering</h3>
+<ul>
+<li>“Remove transaction size limit in Raft. Before this change, large transactions could be written to the raft log but not read. This could lead to unexpected behaviours, for example a leader could stop sending entries to its followers.”</li>
+</ul>
+
+<h3>Browser</h3>
+<ul>
+<li>Fix plan view for DbHits over 32 bit integer max</li>
+<li>Handle more database states</li>
+<li>Expand completion detail by default</li>
+<li>Ensure sso access token is always refreshed on expiry</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

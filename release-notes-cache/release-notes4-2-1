@@ -1,0 +1,21 @@
+
+			
+									<h5>Release Date: 26 November 2020</h5>
+				
+									Neo4j 4.2.1 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes an issue scanning records in high_limit format, where trying to read a record which happened to be a secondary unit would throw exception or read invalid data instead of observing it as unused</li>
+   <li>Upgrade to Apache Shiro 1.7.0</li>
+   <li>Allow cross-version copy in neo4j-admin copy</li>
+   <li>cypher-shell: Update driver version to 4.2.0</li>
+   <li>This fixes a bug where upgrading from 3.5 directly to 4.1 or 4.2 would result in no PUBLIC role being created.</li>
+
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.2-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.2 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.2/">here</a>.				
+					

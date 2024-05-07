@@ -1,0 +1,37 @@
+
+			
+									<h5>Release Date: 28 April 2023</h5>
+				
+									Neo4j 4.4.20 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Upgraded Jettison version to 1.5.4 to fix CVE-2023-1436</li>
+<li>Fix a bug where some data would be lost from index during a full online backup. The data would still be present in the store, but index would be inconsistent. Affected index types are FULLTEXT or TEXT and the data would only be lost on the backup client, the server would still have the correct data.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Using map projections, e.g, RETURN n{.p1, p2: 2}, on composite databases could lead to wrong results.</li>
+<li>fix bug when reusing variable names in merge clauses with multiple relationships</li>
+</ul>
+
+<h3>Browser</h3>
+<ul>
+<li>Add codes to frame notifications</li>
+<li>Add :debug-connectivity frame to help debugging bolt connections</li>
+<li>fix bug where plan view downloads got very low resolution</li>
+<li>Align text table display of nodes with cypher shell</li>
+</ul>
+
+<h3>Docker</h3>
+<ul>
+<li>Add docker healthcheck</li>
+</ul>
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

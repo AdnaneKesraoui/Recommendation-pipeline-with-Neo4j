@@ -1,0 +1,21 @@
+
+			
+									<h5>Release Date: 24 March 2022</h5>
+				
+									Neo4j 4.4.5 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes an issue with token creation (labels, property keys and relationship types) in clustering where internal IDs of created tokens may not be unique, i.e. multiple members could end up creating tokens with the same internal ID</li>
+   <li>Fix error of the kind arraycopy: last source index 1 out of bounds for long[0]
+which could occur when a CartesianProduct was planned under a NestedPlanExpression in pipelined run</li>
+   <li>Fix bug in aggregations with LIMIT where query would fail with an array copy out of bounds error.</li>
+   <li>Remove support for US/Pacific-New timezone. Existing values that use unsupported timezone will be interpreted as US/Pacific</li>
+   <li>Fix bug in aggregations with LIMIT where query would fail with an array copy out of bounds error.</li>
+
+</ul>
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.4 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.4/">here</a>.				
+					

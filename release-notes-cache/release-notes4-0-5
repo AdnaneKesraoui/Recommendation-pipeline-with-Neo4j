@@ -1,0 +1,22 @@
+
+			
+									<h5>Release Date: 4 June 2020</h5>
+				
+									Neo4j 4.0.5 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+
+   <li>Fix the handling of transactions exceeding the 1GiB limit in clusters. This could previously lead to a situation where such a transaction was partially accepted into the system, but could not be replicated. The underlying change might also benefit performance in some situations.</li>
+   <li>Add page cache bytes read/written metrics</li>
+   <li>Fix bug in cardinality calculation where the presence of unrelated arguments could cause the planner to pick a LabelScan instead of an Argument operator.</li>
+    <li>Fix some cases where the server could not be shutdown while it was blocking on startup</li>
+    <li>Fix error with negative ids when using CALL dbms.killQuery</li>
+    <li>Fix show current users privileges for external user</li>
+    <li>Fixes a rare issue where index statistics data could temporarily be observed as being zeros</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.0-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.0 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.0/">here</a>.				
+					

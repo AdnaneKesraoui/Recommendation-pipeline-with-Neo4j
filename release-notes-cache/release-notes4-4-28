@@ -1,0 +1,34 @@
+
+			
+									<h5>Release Date: 16 November 2023</h5>
+				
+									Neo4j 4.4.28 is a maintenance release with many important improvements and fixes.
+
+<h3>Kernel</h3>
+<ul>
+<li>Fixed a bug in the high limit format where records were not correctly read from the transaction log in certain situations.</li>
+</ul>
+
+<h3>Cypher</h3>
+<ul>
+<li>Users using only native authorization will no longer retain the PUBLIC role when they are suspended.</li>
+<li>Fix problem with <code>rand()</code> being evaluated multiple times, see Github issue: <a href="https://github.com/neo4j/neo4j/issues/13296">https://github.com/neo4j/neo4j/issues/13296</a></li>
+</ul>
+
+<h3>Docker</h3>
+<ul>
+<li>replaced gosu with su-exec for better security traceability.</li>
+</ul>
+
+<h3>Misc</h3>
+<ul>
+<li>Bump jetty to 9.4.53.v20231009 for CVE-2023-36478. Please note: this CVE only impacts HTTP/2 and since the server does not support HTTP/2, it is not affected.</li>
+</ul>
+
+
+<br>
+<a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.4-changelog">4.4 Changelog</a>
+<a href="https://neo4j.com/docs/operations-manual/4.4/">4.4 Operations manual</a>
+
+&nbsp;				
+					

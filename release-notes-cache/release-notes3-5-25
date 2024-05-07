@@ -1,0 +1,19 @@
+
+			
+									<h5>Release Date: 26 November 2020</h5>
+				
+									Neo4j 3.5.25 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+  <li>Fixes an issue scanning records in high_limit format, where trying to read a record which happened to be a secondary unit would throw exception or read invalid data instead of observing it as unused</li>
+  <li>Restore ability to have KeyStores with multiple certificates</li>
+  <li>Upgrade to Apache Shiro 1.7.0</li>
+
+</ul>
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-3.5-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 3.5 Operations manual <a href="https://neo4j.com/docs/operations-manual/3.5/">here</a>.
+<h3>Upgrading</h3>
+When upgrading to Neo4j 3.5 for the first time, be sure to read the current upgrade instructions in the <a href="https://neo4j.com/docs/operations-manual/3.5/upgrade/" target="_blank" rel="noopener noreferrer">Neo4j Operations Manual</a>, as there are additional steps and considerations.				
+					

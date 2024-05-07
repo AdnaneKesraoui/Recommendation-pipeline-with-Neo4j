@@ -1,0 +1,26 @@
+
+			
+									<h5>Release Date: 23 August 2021</h5>
+				
+									Neo4j 4.2.10 is a maintenance release with many important improvements and fixes.
+<h3>Highlights</h3>
+
+<ul>
+   <li>Fixes issues with ID reuse where reusable IDs sometimes weren’t prioritized during concurrent ID allocation and where allocating new IDs would happen instead, increasing the store file sizes unnecessarily.</li>
+   <li>Allow schema transaction to pass unconditionally with the snapshot execution engine</li>
+   <li>Do not consider pre-allocated files corrupted</li>
+   <li>2 OPTIONAL MATCH fixes:
+     <ul>
+        <li>When performing an OPTIONAL MATCH, when returning distinct results (whether in the context of an aggregation or not), the results would be wrong. This could happen regardless of whether the query starts with the OPTIONAL MATCH or not. An example query that returned wrong results is: OPTIONAL MATCH (a:A)-[:KNOWS]-&gt;(b:B) RETURN count(DISTINCT a) AS count. This has been fixed.</li>
+        <li>When performing an OPTIONAL MATCH with 2 or more relationships of different relationship types, when returning DISTINCT results (whether in the context of an aggregation or not), the results could be wrong. An example query that returned wrong results is: OPTIONAL MATCH (a)-[r:R]-&gt;(b)-[r2:R2]-&gt;(c) RETURN count(DISTINCT a) as count. This has been fixed.</li>
+      </ul>
+   </li><li>Allow to call length() with strings and lists in CYPHER 3.5 mode</li>
+   <li>do not allow sysinfo command when using system db</li>
+   <li>Fix sysinfo frame, by reading new neo4j settings</li>
+</ul>
+  
+
+<h3>Detailed Changes and Docs</h3>
+For the complete list of all changes, please see <a href="https://github.com/neo4j/neo4j/wiki/Neo4j-4.2-changelog" target="_blank" rel="noopener noreferrer">the changelog</a>.
+Look for 4.2 Operations manual <a href="https://neo4j.com/docs/operations-manual/4.2/">here</a>.				
+					
